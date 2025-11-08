@@ -1,0 +1,19 @@
+{
+    "name": "3src/oneye",
+    "description": "oneye - web-based operating system",
+    "type": "project",
+    "license": "AGPL-3.0-or-later",
+    "require": {
+        "php": ">=7.4",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "OneEye\\": "system/"
+        }
+    },
+    "config": {
+        "vendor-dir": "system/vendor",
+        "optimize-autoloader": true
+    }
+}

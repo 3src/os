@@ -300,19 +300,22 @@ function eyeMail_on_fetch($params) {
 }
 
 function eyeMail_sendMail($to,$cc,$cco,$sbj,$body) {
-	include_once(EYE_ROOT.'/'.APP_DIR.'/eyeMail/class.phpmailer.php');
+	// Load Composer autoloader for PHPMailer 6.x
+	require_once(EYE_ROOT.'/system/vendor/autoload.php');
+
 	$config = eyeXML('getXMLconfig',array('eyeMail','settings.xml'));
-	$mail = new PHPMailer();
-	$mail->PluginDir = EYE_ROOT.'/'.APP_DIR.'/eyeMail/';
+	// Use namespaced PHPMailer class
+	$mail = new \PHPMailer\PHPMailer\PHPMailer(true);
+	// Note: PluginDir is no longer used in PHPMailer 6.x
 
 	$defaultAccount = $GLOBALS['defaultMail']->text;
-	$mail->From = $defaultAccount['email'][0];
-	$mail->FromName= $defaultAccount['name'][0];
+	// PHPMailer 6.x uses method calls instead of property assignment
+	$mail->setFrom($defaultAccount['email'][0], $defaultAccount['name'][0]);
 
 	$mail->Host = $defaultAccount['smtphost'][0];
 	$mail->Mailer = 'smtp';
 
-	$mail->IsSMTP(true);
+	$mail->isSMTP(); // Note: lowercase 's' in PHPMailer 6.x
 
 	if(intval($defaultAccount['smtpssl'][0]) == 1) {
 		$mail->SMTPSecure = 'ssl';
@@ -327,35 +330,35 @@ function eyeMail_sendMail($to,$cc,$cco,$sbj,$body) {
 
 	if(count($GLOBALS['attachments']->text)) {
 		foreach($GLOBALS['attachments']->text as $value) {
-			$mail->AddAttachment(vfs('getRealName',array($value)),basename($value));
+			$mail->addAttachment(vfs('getRealName',array($value)),basename($value));
 		}
 	}
 	$oldTo = $to;
 	$to = /* utf8 */ explode(',', $to);
 	foreach($to as $value) {
-		$mail->AddAddress($value);
+		$mail->addAddress($value);
 	}
 
 	if($cc) {
 		$cc = /* utf8 */ explode(',', $cc);
 		foreach($cc as $value) {
-			$mail->AddCC($value);
+			$mail->addCC($value);
 		}
 	}
 
 	if($cco) {
 		$cco = /* utf8 */ explode(',', $cco);
 		foreach($cco as $value) {
-			$mail->AddBCC($value);
+			$mail->addBCC($value);
 		}
 	}
 
 	$mail->Port = $defaultAccount['smtpport'][0];
 
 	if(intval($config['eyeMail'][0]['sendRich'][0]) == 1) {
-		$mail->IsHTML(true);
+		$mail->isHTML(true);
 	} else {
-		$mail->IsHTML(false);
+		$mail->isHTML(false);
 	}
 
 	$mail->Subject = $sbj;
@@ -363,27 +366,31 @@ function eyeMail_sendMail($to,$cc,$cco,$sbj,$body) {
 
 	$mail->SMTPDebug = 0;
 
-	if($mail->Send()) {
-		$GLOBALS['eyeMail_activityImgContainer']->hide();
-		$userconfig = $GLOBALS['defaultMail']->text;
+	try {
+		if($mail->send()) {
+			$GLOBALS['eyeMail_activityImgContainer']->hide();
+			$userconfig = $GLOBALS['defaultMail']->text;
 
-		$dbPath = um('getCurrentUserDir').'/conf/eyeMail/db_'.$userconfig['id'][0].'.sqlite';
-		$sqliteError = null;
-		$dbHandle = sqlite_open($dbPath, 0666, $sqliteError) or die($sqliteError);
-		$sqlInsert = 'INSERT INTO sent (subject, date, sender, to, body) VALUES (\''.sqlite_escape_string(imap_utf8($sbj)).'\',';
-		$sqlInsert.= '\''.sqlite_escape_string(date('d/m/y',time())).'\', \''.sqlite_escape_string($defaultAccount['email'][0]).'\', \''.sqlite_escape_string($oldTo).'\', \''.sqlite_escape_string($body).'\')';
-		sqlite_exec($dbHandle, $sqlInsert);
-		if($GLOBALS['location']->text == 'sent') {
-			eyeMail_on_printSent();
+			$dbPath = um('getCurrentUserDir').'/conf/eyeMail/db_'.$userconfig['id'][0].'.sqlite';
+			$sqliteError = null;
+			$dbHandle = sqlite_open($dbPath, 0666, $sqliteError) or die($sqliteError);
+			$sqlInsert = 'INSERT INTO sent (subject, date, sender, to, body) VALUES (\''.sqlite_escape_string(imap_utf8($sbj)).'\',';
+			$sqlInsert.= '\''.sqlite_escape_string(date('d/m/y',time())).'\', \''.sqlite_escape_string($defaultAccount['email'][0]).'\', \''.sqlite_escape_string($oldTo).'\', \''.sqlite_escape_string($body).'\')';
+			sqlite_exec($dbHandle, $sqlInsert);
+			if($GLOBALS['location']->text == 'sent') {
+				eyeMail_on_printSent();
+			}
+			if($config['eyeMail'][0]['visualAlert'][0] == 1) {
+				eyeX('messageBox',array('content'=>'Your message has been sent'));
+			}
+		} else {
+			$GLOBALS['eyeMail_activityImgContainer']->hide();
+			eyeX('messageBox',array('content'=>'Error sending mail'));
 		}
-		if($config['eyeMail'][0]['visualAlert'][0] == 1) {
-			eyeX('messageBox',array('content'=>'Your message has been sent'));
-		}
-	} else {
+	} catch (\PHPMailer\PHPMailer\Exception $e) {
 		$GLOBALS['eyeMail_activityImgContainer']->hide();
-		eyeX('messageBox',array('content'=>'Error sending mail'));
+		eyeX('messageBox',array('content'=>'Error sending mail: ' . $mail->ErrorInfo));
 	}
-
 }
 
 function eyeMail_compose($to="",$sbj="",$body="",$recv=0,$attachments="") {

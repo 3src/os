@@ -4,3 +4,8 @@
 system/accounts
 system/tmp
 system/users/rt4/root/conf
+
+# Composer dependencies
+/system/vendor/
+/vendor/
+composer.lock
