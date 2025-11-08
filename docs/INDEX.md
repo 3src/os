@@ -33,7 +33,11 @@
 | [PHP8_OBSOLETE_CODE_DOCUMENTATION.md](../PHP8_OBSOLETE_CODE_DOCUMENTATION.md) | Complete catalog of obsolete code patterns | 485 | ✅ Complete |
 | [PHP8_UPGRADE_FEASIBILITY_ANALYSIS.md](../PHP8_UPGRADE_FEASIBILITY_ANALYSIS.md) | Detailed migration strategy and cost-benefit | 504 | ✅ Complete |
 | [PHPMAILER_MIGRATION.md](../PHPMAILER_MIGRATION.md) | PHPMailer 5.1 → 6.12.0 migration guide | 376 | ✅ Complete |
-| [TESTING_JOURNAL.md](../TESTING_JOURNAL.md) | 100+ test cases with status tracking | 423 | ✅ Complete |
+| [VAR_KEYWORD_MIGRATION.md](../VAR_KEYWORD_MIGRATION.md) | var keyword replacement guide | 900+ | ✅ Complete |
+| [XMLRPC_MIGRATION.md](../XMLRPC_MIGRATION.md) | XML-RPC library PHP 8 compatibility | 900+ | ✅ Complete |
+| [TESTING_JOURNAL.md](../TESTING_JOURNAL.md) | 100+ test cases with status tracking | 450+ | 🔄 Updated regularly |
+| [TEST_PLAN.md](../TEST_PLAN.md) | Critical P0 tests for production deployment | 800+ | ✅ Complete |
+| [RISK_ASSESSMENT.md](../RISK_ASSESSMENT.md) | Success probability & risk analysis | 900+ | ✅ Complete |
 
 ### 3. User Documentation
 

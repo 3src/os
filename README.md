@@ -120,12 +120,16 @@ composer install
 
 ### Migration & Modernization
 
-- [**PHP 8 Migration Status**](docs/MIGRATION_STATUS.md) - Current progress
-- [**PHP 8 Obsolete Code Documentation**](PHP8_OBSOLETE_CODE_DOCUMENTATION.md) - Detailed issue catalog
+- [**PHP 8 Migration Status**](docs/MIGRATION_STATUS.md) - Current progress (14% complete, 948/1018 issues fixed)
+- [**PHP 8 Obsolete Code Documentation**](PHP8_OBSOLETE_CODE_DOCUMENTATION.md) - Detailed issue catalog (100+ patterns)
 - [**PHP 8 Upgrade Feasibility Analysis**](PHP8_UPGRADE_FEASIBILITY_ANALYSIS.md) - Complete migration strategy
-- [**PHPMailer Migration**](PHPMAILER_MIGRATION.md) - First completed migration
-- [**Testing Journal**](TESTING_JOURNAL.md) - Comprehensive test tracking
-- [**Naming Analysis**](docs/HELIXOS_NAMING_ANALYSIS.md) - Rebranding rationale
+- [**PHPMailer Migration**](PHPMAILER_MIGRATION.md) - PHPMailer 5.1 → 6.12.0 upgrade
+- [**var Keyword Migration**](VAR_KEYWORD_MIGRATION.md) - var → public replacement (917 fixes)
+- [**XML-RPC Migration**](XMLRPC_MIGRATION.md) - XML-RPC PHP 8 compatibility (18 fixes)
+- [**Test Plan**](TEST_PLAN.md) - 38 critical P0 tests for production readiness
+- [**Risk Assessment**](RISK_ASSESSMENT.md) - Success probability & risk analysis (85% confidence)
+- [**Testing Journal**](TESTING_JOURNAL.md) - Comprehensive test tracking (100+ tests)
+- [**Naming Analysis**](docs/HELIXOS_NAMING_ANALYSIS.md) - Rebranding rationale (HELIXOS proposal)
 
 ---
 
