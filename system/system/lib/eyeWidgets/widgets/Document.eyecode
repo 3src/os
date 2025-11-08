@@ -16,8 +16,8 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 
 class Document {
 
-	var $docType;
-	var $name;
+	public $docType;
+	public $name;
 
 	function __construct($params) {
 		$this->name=$params['name'];

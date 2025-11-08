@@ -21,31 +21,31 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Textbox {
 
 	//pid controller
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
 	//friends abstraction
-	var $friends="''";
+	public $friends="''";
 
-	var $showed = 0;
+	public $showed = 0;
 	//custom widget options
-	var $password;
-	var $width;
-	var $enabled;
-	var $visible;
-	var $text;
-	var $noborder;
-	var $align='left';
+	public $password;
+	public $width;
+	public $enabled;
+	public $visible;
+	public $text;
+	public $noborder;
+	public $align='left';
 	function __construct($params) {
 		global $myPid;
 		$this->creatorPid = $myPid;

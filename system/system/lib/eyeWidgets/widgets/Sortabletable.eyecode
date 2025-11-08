@@ -21,34 +21,34 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Sortabletable {
 
 	//pid controller
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//friends abstraction
-	var $friends="''";
+	public $friends="''";
 
 	//custom widget options
-	var $height;
-	var $width;
-	var $visible;
-	var $theader;
-	var $tbody;
-	var $sortypes;
-	var $sizeUnit;
-	var $master;
-	var $signal;
+	public $height;
+	public $width;
+	public $visible;
+	public $theader;
+	public $tbody;
+	public $sortypes;
+	public $sizeUnit;
+	public $master;
+	public $signal;
 	function __construct($params) {
 		global $myPid;
 		$this->creatorPid = $myPid;
@@ -273,14 +273,14 @@ class Sortabletable {
 }
 
 class SortabletableSelected {
-	var $selected;
-	var $name;
-	var $width;
-	var $height;
-	var $theader;
-	var $sortypes;
-	var $x;
-	var $y;
+	public $selected;
+	public $name;
+	public $width;
+	public $height;
+	public $theader;
+	public $sortypes;
+	public $x;
+	public $y;
 	function __construct($params) {
 		$this->name = $params['name'];
 		$this->width = $params['width'];

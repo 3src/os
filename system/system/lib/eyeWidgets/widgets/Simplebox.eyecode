@@ -21,25 +21,25 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Simplebox {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
-	var $visible;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
+	public $visible;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $width;
-	var $height;
-	var $border;
+	public $width;
+	public $height;
+	public $border;
 	function __construct($params) {
 		if(!is_array($params)){
 			//TODO: put this error handler in all widgets an use errorLib

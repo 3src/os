@@ -21,34 +21,34 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Tab {
 
 	//pid controller
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
 	//custom widget options
-	var $useDisplay;
-	var $visible;
-	var $width;
-	var $height;
-	var $signal;
-	var $tabwidth;
+	public $useDisplay;
+	public $visible;
+	public $width;
+	public $height;
+	public $signal;
+	public $tabwidth;
 
-	var $showed = 0;
+	public $showed = 0;
 
-	var $counter = 0;
+	public $counter = 0;
 	//friends abstraction
-	var $friends="";
+	public $friends="";
 
-	var $myTabs=array();
+	public $myTabs=array();
 	//constructor
 	function __construct($params) {
 		global $myPid;

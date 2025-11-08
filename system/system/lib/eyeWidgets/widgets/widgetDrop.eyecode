@@ -22,21 +22,21 @@ define('SIMPLE_MENU','widgetDrop_simpleMenu');
 class widgetDrop {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $callBack;
-	var $cOrder;
-	var $signal;
-	var $behaviour;
-	var $sender;
-	var $mySelf;
+	public $callBack;
+	public $cOrder;
+	public $signal;
+	public $behaviour;
+	public $sender;
+	public $mySelf;
 
 	function __construct($params) {
 		global $myPid;

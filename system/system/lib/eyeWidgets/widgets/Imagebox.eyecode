@@ -21,35 +21,35 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Imagebox {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $url;
-	var $visible;
-	var $alt;
-	var $width;
-	var $height;
-	var $myClass;
+	public $url;
+	public $visible;
+	public $alt;
+	public $width;
+	public $height;
+	public $myClass;
 
 	//friends abstraction
-	var $friends="''";
+	public $friends="''";
 
 	//event handling
-	var $disableMsg = 0;
-	var $signal;
+	public $disableMsg = 0;
+	public $signal;
 
 	//constructor
 	function __construct($params) {

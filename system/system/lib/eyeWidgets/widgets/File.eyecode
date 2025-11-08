@@ -17,26 +17,26 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class File {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $filename;
-	var $visible;
-	var $callback;
-	var $multiple;
+	public $filename;
+	public $visible;
+	public $callback;
+	public $multiple;
 	//constructor
 	function __construct($params) {
 		global $myPid;

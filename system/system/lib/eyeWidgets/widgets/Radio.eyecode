@@ -21,26 +21,26 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Radio {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//global widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
-	var $showed;
+	public $showed;
 
 	//custom widget options
-	var $enabled;
-	var $visible;
-	var $checked;
-	var $content;
+	public $enabled;
+	public $visible;
+	public $checked;
+	public $content;
 
 	function __construct($params) {
 		global $myPid;

@@ -21,29 +21,29 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Checkbox {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//global widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $width;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $width;
+	public $cent;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $enabled;
-	var $visible;
-	var $text;
-	var $tokens;
-	var $checked;
-	var $value;
+	public $enabled;
+	public $visible;
+	public $text;
+	public $tokens;
+	public $checked;
+	public $value;
 
 	function __construct($params) {
 		global $myPid;

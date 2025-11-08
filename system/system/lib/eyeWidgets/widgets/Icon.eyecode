@@ -21,43 +21,43 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Icon {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
-	var $visible;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
+	public $visible;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $draggable;
-	var $onclick;
-	var $image;
-	var $text;
-	var $content;
-	var $myOnLoad;
+	public $draggable;
+	public $onclick;
+	public $image;
+	public $text;
+	public $content;
+	public $myOnLoad;
 
-	var $width;
-	var $height;
+	public $width;
+	public $height;
 
-	var $breaktext;
-	var $tooltip;
+	public $breaktext;
+	public $tooltip;
 	//event handling
-	var $events;
-	var $overBorder;
-	var $overBorderBg;
-	var $overBorderColor;
-	var $textColor;
-	var $overClass;
-	var $useClass;
+	public $events;
+	public $overBorder;
+	public $overBorderBg;
+	public $overBorderColor;
+	public $textColor;
+	public $overClass;
+	public $useClass;
 
 	function __construct($params) {
 		global $myPid;

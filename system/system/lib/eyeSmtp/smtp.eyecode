@@ -60,7 +60,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $user="";
+	public $user="";
 
 /*
 {metadocument}
@@ -78,7 +78,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $realm="";
+	public $realm="";
 
 /*
 {metadocument}
@@ -95,7 +95,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $password="";
+	public $password="";
 
 /*
 {metadocument}
@@ -113,7 +113,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $workstation="";
+	public $workstation="";
 
 /*
 {metadocument}
@@ -133,7 +133,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $authentication_mechanism="";
+	public $authentication_mechanism="";
 
 /*
 {metadocument}
@@ -149,7 +149,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $host_name="";
+	public $host_name="";
 
 /*
 {metadocument}
@@ -164,7 +164,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $host_port=25;
+	public $host_port=25;
 
 /*
 {metadocument}
@@ -181,7 +181,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $ssl=0;
+	public $ssl=0;
 
 /*
 {metadocument}
@@ -200,7 +200,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $start_tls = 0;
+	public $start_tls = 0;
 
 /*
 {metadocument}
@@ -216,7 +216,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $localhost="";
+	public $localhost="";
 
 /*
 {metadocument}
@@ -234,7 +234,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $timeout=0;
+	public $timeout=0;
 
 /*
 {metadocument}
@@ -254,7 +254,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $data_timeout=0;
+	public $data_timeout=0;
 
 /*
 {metadocument}
@@ -275,7 +275,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $direct_delivery=0;
+	public $direct_delivery=0;
 
 /*
 {metadocument}
@@ -292,7 +292,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $error="";
+	public $error="";
 
 /*
 {metadocument}
@@ -311,7 +311,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $debug=0;
+	public $debug=0;
 
 /*
 {metadocument}
@@ -329,7 +329,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $html_debug=0;
+	public $html_debug=0;
 
 /*
 {metadocument}
@@ -347,7 +347,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $esmtp=1;
+	public $esmtp=1;
 
 /*
 {metadocument}
@@ -364,7 +364,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $esmtp_extensions=array();
+	public $esmtp_extensions=array();
 
 /*
 {metadocument}
@@ -387,7 +387,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $exclude_address="";
+	public $exclude_address="";
 
 /*
 {metadocument}
@@ -405,7 +405,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $getmxrr="GetMXRR";
+	public $getmxrr="GetMXRR";
 
 /*
 {metadocument}
@@ -421,7 +421,7 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $pop3_auth_host="";
+	public $pop3_auth_host="";
 
 /*
 {metadocument}
@@ -437,20 +437,20 @@ class smtp_class
 	</variable>
 {/metadocument}
 */
-	var $pop3_auth_port=110;
+	public $pop3_auth_port=110;
 
 	/* private variables - DO NOT ACCESS */
 
-	var $state="Disconnected";
-	var $connection=0;
-	var $pending_recipients=0;
-	var $next_token="";
-	var $direct_sender="";
-	var $connected_domain="";
-	var $result_code;
-	var $disconnected_error=0;
-	var $esmtp_host="";
-	var $maximum_piped_recipients=100;
+	public $state="Disconnected";
+	public $connection=0;
+	public $pending_recipients=0;
+	public $next_token="";
+	public $direct_sender="";
+	public $connected_domain="";
+	public $result_code;
+	public $disconnected_error=0;
+	public $esmtp_host="";
+	public $maximum_piped_recipients=100;
 
 	/* Private methods - DO NOT CALL */
 

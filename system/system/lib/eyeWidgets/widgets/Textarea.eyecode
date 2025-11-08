@@ -21,31 +21,31 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Textarea {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//global widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $enabled;
-	var $visible;
-	var $text;
-	var $width;
-	var $height;
-	var $rich;
-	var $rows;
-	var $cols;
-	var $cssClass;
+	public $enabled;
+	public $visible;
+	public $text;
+	public $width;
+	public $height;
+	public $rich;
+	public $rows;
+	public $cols;
+	public $cssClass;
 
 	function __construct($params) {
 		global $myPid;

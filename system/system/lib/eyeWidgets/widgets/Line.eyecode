@@ -21,25 +21,25 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Line {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $visible;
-	var $width;
-	var $height;
+	public $visible;
+	public $width;
+	public $height;
 
 	//function Label($name,$content,$father,$cent=0,$x=40,$y=40,$horiz=0,$vert=0,$visible=1,$color="") {
 	function __construct($params) {

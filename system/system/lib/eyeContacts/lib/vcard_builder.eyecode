@@ -77,7 +77,7 @@ class Contact_Vcard_Build extends PEAR
      * @access public
      * @var array
      */
-    var $value = array();
+    public $value = array();
 
     /**
      * Parameters for vCard components.
@@ -85,7 +85,7 @@ class Contact_Vcard_Build extends PEAR
      * @access public
      * @var array
      */
-    var $param = array();
+    public $param = array();
 
     /**
      * Tracks which component (N, ADR, TEL, etc) value was last set or added.
@@ -94,7 +94,7 @@ class Contact_Vcard_Build extends PEAR
      * @access public
      * @var string
      */
-    var $autoparam = null;
+    public $autoparam = null;
 
     /**
      * Constructor.

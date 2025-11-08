@@ -44,17 +44,17 @@ define('WIN_IMAGE_DRAGGABLE', 101);
 define('WIN_IMAGE_DRAGGABLE_NOTLISTED', 102);
 
 class Window {
-	var $creatorPid;
-	var $father;
-	var $name;
-	var $xChecknum;
+	public $creatorPid;
+	public $father;
+	public $name;
+	public $xChecknum;
 
-	var $allDrag;
-	var $background;
-	var $cent;
-	var $close = 0;
-	var $close_pos;
-	var $cssClasses = array(
+	public $allDrag;
+	public $background;
+	public $cent;
+	public $close = 0;
+	public $close_pos;
+	public $cssClasses = array(
 		'wBottomCenter' => 'eyeWindowBottom_center',
 		'wBottomLeft' => 'eyeWindowBottom_left',
 		'wBottomRight' => 'eyeWindowBottom_right',
@@ -68,52 +68,52 @@ class Window {
 		'wTitleRight' => 'eyeWindowTitle_border_right',
 		'wTitleText' => 'eyeWindowTitle_text'
 	);
-	var $cssReplace;
-	var $dragBgAlpha;
-	var $dragBgColor;
-	var $friends = "''";
-	var $fullScreen = 0;
-	var $height;
-	var $horiz;
-	var $image = null;
-	var $listed = 0;
-	var $max = 0;
-	var $maxHeight;
-	var $maxWidth;
-	var $maximized = 0;
-	var $max_pos;
-	var $min = 0;
-	var $minHeight;
-	var $minWidth;
-	var $min_pos;
-	var $noZindex;
-	var $nodrag = 0;
-	var $noresize = 0;
-	var $oldHeight;
-	var $oldWidth;
-	var $oldX;
-	var $oldY;
-	var $removeFatherPid;
-	var $removeWin;
-	var $removepid;
-	var $resize = 0;
-	var $saveFunc;
-	var $saveSize;
-	var $savePosition;
-	var $sendResizeMsg;
-	var $showDragContent;
-	var $showed = 0;
-	var $showtitle = 0;
-	var $sigClose;
-	var $sigResize;
-	var $style;
-	var $title;
-	var $type;
-	var $vert;
-	var $visible = 0;
-	var $width;
-	var $x;
-	var $y;
+	public $cssReplace;
+	public $dragBgAlpha;
+	public $dragBgColor;
+	public $friends = "''";
+	public $fullScreen = 0;
+	public $height;
+	public $horiz;
+	public $image = null;
+	public $listed = 0;
+	public $max = 0;
+	public $maxHeight;
+	public $maxWidth;
+	public $maximized = 0;
+	public $max_pos;
+	public $min = 0;
+	public $minHeight;
+	public $minWidth;
+	public $min_pos;
+	public $noZindex;
+	public $nodrag = 0;
+	public $noresize = 0;
+	public $oldHeight;
+	public $oldWidth;
+	public $oldX;
+	public $oldY;
+	public $removeFatherPid;
+	public $removeWin;
+	public $removepid;
+	public $resize = 0;
+	public $saveFunc;
+	public $saveSize;
+	public $savePosition;
+	public $sendResizeMsg;
+	public $showDragContent;
+	public $showed = 0;
+	public $showtitle = 0;
+	public $sigClose;
+	public $sigResize;
+	public $style;
+	public $title;
+	public $type;
+	public $vert;
+	public $visible = 0;
+	public $width;
+	public $x;
+	public $y;
 
 	function __construct($params) {
 		global $myPid;

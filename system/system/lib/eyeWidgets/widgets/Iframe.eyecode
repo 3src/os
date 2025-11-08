@@ -21,26 +21,26 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Iframe {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
-	var $visible;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
+	public $visible;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $url;
-	var $width;
-	var $height;
-	var $scroll;
+	public $url;
+	public $width;
+	public $height;
+	public $scroll;
 
 	function __construct($params) {
 		global $myPid;

@@ -17,14 +17,14 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class SimpleMenu {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 	//global widgets options without default
-	var $name;
-	var $father;
-	var $showed = 0;
-	var $sFather;
-	var $mFather;
-	var $rFather;
+	public $name;
+	public $father;
+	public $showed = 0;
+	public $sFather;
+	public $mFather;
+	public $rFather;
 
 	function __construct($params) {
 		global $myPid;

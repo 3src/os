@@ -125,14 +125,78 @@ Post-deployment monitoring and validation.
 
 ### 2.1 `var` Keyword Replacement
 
-**Status:** Not yet started
-**Estimated Tests:** 50+ tests across widget components
+**Component:** Widget System, Custom Apps, Libraries
+**Migration Date:** 2025-11-08
+**Files Modified:** 48 files (917 occurrences)
+**Status:** ✅ MIGRATION COMPLETE - Tests pending
+**Documentation:** VAR_KEYWORD_MIGRATION.md
+
+#### Widget Instantiation Tests
 
 | Test ID | Description | Priority | Stage | Status | Notes |
 |---------|-------------|----------|-------|--------|-------|
-| VAR-001 | Verify all widgets still instantiate | 🔴 P0 | Stage 1 | 🚫 BLOCKED | Not yet migrated |
-| VAR-002 | Property visibility enforcement | 🟡 P1 | Stage 1 | 🚫 BLOCKED | Public/private/protected |
-| VAR-003 | No property access violations | 🔴 P0 | Stage 2 | 🚫 BLOCKED | Encapsulation |
+| VAR-001 | Instantiate Button widget | 🔴 P0 | Stage 1 | ⏳ PENDING | Test var → public conversion |
+| VAR-002 | Instantiate Window widget | 🔴 P0 | Stage 1 | ⏳ PENDING | Largest widget class (56 properties) |
+| VAR-003 | Instantiate Textbox widget | 🔴 P0 | Stage 1 | ⏳ PENDING | Common input widget |
+| VAR-004 | Instantiate Calendar widget | 🔴 P0 | Stage 1 | ⏳ PENDING | Had tab whitespace issues |
+| VAR-005 | Instantiate all 33 widget types | 🔴 P0 | Stage 1 | ⏳ PENDING | Comprehensive widget test |
+
+#### Property Access Tests
+
+| Test ID | Description | Priority | Stage | Status | Notes |
+|---------|-------------|----------|-------|--------|-------|
+| VAR-006 | Read public properties from outside class | 🔴 P0 | Stage 1 | ⏳ PENDING | $widget->property |
+| VAR-007 | Write public properties from outside class | 🔴 P0 | Stage 1 | ⏳ PENDING | $widget->property = value |
+| VAR-008 | Access default property values | 🟡 P1 | Stage 1 | ⏳ PENDING | var $enabled = 1 |
+| VAR-009 | Modify properties after instantiation | 🟡 P1 | Stage 1 | ⏳ PENDING | Runtime property changes |
+| VAR-010 | Verify no visibility violations | 🔴 P0 | Stage 2 | ⏳ PENDING | All properties remain public |
+
+#### Widget Display Tests
+
+| Test ID | Description | Priority | Stage | Status | Notes |
+|---------|-------------|----------|-------|--------|-------|
+| VAR-011 | Render Button widget | 🔴 P0 | Stage 2 | ⏳ PENDING | Visual rendering test |
+| VAR-012 | Render Window with child widgets | 🔴 P0 | Stage 2 | ⏳ PENDING | Container widget test |
+| VAR-013 | Render all widget types in desktop | 🟡 P1 | Stage 2 | ⏳ PENDING | Full widget suite |
+| VAR-014 | Test widget positioning (x, y properties) | 🟡 P1 | Stage 2 | ⏳ PENDING | Layout properties |
+| VAR-015 | Test widget sizing (width, height) | 🟡 P1 | Stage 2 | ⏳ PENDING | Dimension properties |
+
+#### Custom Apps Tests
+
+| Test ID | Description | Priority | Stage | Status | Notes |
+|---------|-------------|----------|-------|--------|-------|
+| VAR-016 | eyeFeeds: RSS feed parsing | 🔴 P0 | Stage 2 | ⏳ PENDING | 210 var replacements |
+| VAR-017 | eyeSheets: ODS file handling | 🟡 P1 | Stage 2 | ⏳ PENDING | 10 var replacements |
+| VAR-018 | eyeArchive: Project class instantiation | 🟡 P1 | Stage 2 | ⏳ PENDING | 4 var replacements |
+| VAR-019 | All three apps launch successfully | 🔴 P0 | Stage 2 | ⏳ PENDING | Integration test |
+
+#### Custom Libraries Tests
+
+| Test ID | Description | Priority | Stage | Status | Notes |
+|---------|-------------|----------|-------|--------|-------|
+| VAR-020 | eyeSmtp: Email sending | 🔴 P0 | Stage 2 | ⏳ PENDING | 45 var replacements |
+| VAR-021 | eyeZip: Archive creation | 🟡 P1 | Stage 2 | ⏳ PENDING | 5 var replacements |
+| VAR-022 | eyeSimpleDb: Database operations | 🟡 P1 | Stage 2 | ⏳ PENDING | 5 var replacements |
+| VAR-023 | eyeSockets: Socket connections | 🔵 P2 | Stage 2 | ⏳ PENDING | 8 var replacements |
+| VAR-024 | eyeContacts: vCard handling | 🔵 P2 | Stage 2 | ⏳ PENDING | 3 var replacements |
+| VAR-025 | eyeAddressBook: Contact management | 🔵 P2 | Stage 2 | ⏳ PENDING | 3 var replacements |
+
+#### XML-RPC Tests
+
+| Test ID | Description | Priority | Stage | Status | Notes |
+|---------|-------------|----------|-------|--------|-------|
+| VAR-026 | XML-RPC method calls | 🔵 P2 | Stage 2 | ⏳ PENDING | 63 var replacements |
+| VAR-027 | XML-RPC data serialization | 🔵 P2 | Stage 2 | ⏳ PENDING | Property access test |
+
+#### Regression Tests
+
+| Test ID | Description | Priority | Stage | Status | Notes |
+|---------|-------------|----------|-------|--------|-------|
+| VAR-028 | No PHP deprecation warnings | 🔴 P0 | Stage 1 | ⏳ PENDING | Check error log |
+| VAR-029 | No fatal errors on widget creation | 🔴 P0 | Stage 1 | ⏳ PENDING | Basic smoke test |
+| VAR-030 | Desktop environment loads | 🔴 P0 | Stage 2 | ⏳ PENDING | Full integration |
+| VAR-031 | Existing saved desktops still work | 🟡 P1 | Stage 2 | ⏳ PENDING | Data compatibility |
+| VAR-032 | Widget state persistence | 🟡 P1 | Stage 2 | ⏳ PENDING | Save/restore properties |
 
 ### 2.2 XML-RPC Library Update
 

@@ -17,28 +17,28 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Flash {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $src;
-	var $visible;
-	var $width;
-	var $height;
-	var $flashParamsNames;
-	var $flashParamsValues;
+	public $src;
+	public $visible;
+	public $width;
+	public $height;
+	public $flashParamsNames;
+	public $flashParamsValues;
 	//constructor
 	function __construct($params) {
 		global $myPid;

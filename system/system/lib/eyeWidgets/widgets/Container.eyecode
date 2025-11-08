@@ -21,26 +21,26 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Container {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
-	var $visible;
-	var $removepid;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
+	public $visible;
+	public $removepid;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $width;
-	var $height;
-	var $unit;
+	public $width;
+	public $height;
+	public $unit;
 
 	function __construct($params) {
 		global $myPid;

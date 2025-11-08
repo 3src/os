@@ -15,16 +15,16 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 */
 
 class ods {
-	var $fonts;
-	var $styles;
-	var $sheets;
-	var $lastElement;
-	var $fods;
-	var $currentSheet;
-	var $currentRow;
-	var $currentCell;
-	var $lastRowAtt;
-	var $repeat;
+	public $fonts;
+	public $styles;
+	public $sheets;
+	public $lastElement;
+	public $fods;
+	public $currentSheet;
+	public $currentRow;
+	public $currentCell;
+	public $lastRowAtt;
+	public $repeat;
 
 	function ods() {
 		$this->styles = array();

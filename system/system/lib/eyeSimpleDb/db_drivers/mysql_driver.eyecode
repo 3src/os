@@ -27,10 +27,10 @@ function get_db_object(){
 */
 class dbDriver{
 
-	var $error;//storage the error text when it appears (the i18n is php dependence)
-	var $conn;//A conection link (in dbDriver for txt is the file descriptor).
-	var $result;
-	var $connEncoding = 'utf8';//Our default encoding is utf8
+	public $error;//storage the error text when it appears (the i18n is php dependence)
+	public $conn;//A conection link (in dbDriver for txt is the file descriptor).
+	public $result;
+	public $connEncoding = 'utf8';//Our default encoding is utf8
 
 	//Constructor, check if mysql function are available
 	function dbDriver(){

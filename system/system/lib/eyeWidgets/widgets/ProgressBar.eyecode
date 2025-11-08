@@ -21,25 +21,25 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class ProgressBar {
 
 	//pid controller
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
-	var $showed = 0;
+	public $showed = 0;
 	//custom widget options
-	var $width;
-	var $max;
-	var $visible;
-	var $progress;
+	public $width;
+	public $max;
+	public $visible;
+	public $progress;
 
 	function __construct($params) {
 		global $myPid;

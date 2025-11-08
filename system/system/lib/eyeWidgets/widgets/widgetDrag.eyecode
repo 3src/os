@@ -21,25 +21,25 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class widgetDrag {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $widgetDrag;
-	var $content;
-	var $clickSignal;
-	var $widgetDragCursor;
-	var $widgetDragPos;
-	var $clickCallback;
-	var $dragAlpha;
-	var $dragCss;
-	var $x;
-	var $y;
+	public $widgetDrag;
+	public $content;
+	public $clickSignal;
+	public $widgetDragCursor;
+	public $widgetDragPos;
+	public $clickCallback;
+	public $dragAlpha;
+	public $dragCss;
+	public $x;
+	public $y;
 
 	function __construct($params) {
 		global $myPid;

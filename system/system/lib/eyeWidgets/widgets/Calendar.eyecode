@@ -21,43 +21,43 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Calendar{
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $width;
-	var $height;
-	var $visible;
-	var $rowsAndDate;
-	var $workDays;
-	var $preMonthDays;
-	var $nextMonthDays;
-	var $weekEnd;
-	var	$backgroundNames;
-	var	$todayBorder;
-	var	$todayBackground;
-	var	$todayFontColor;
-	var	$toWeekBackground;
-	var $clickedBorder;
-	var $clickedWeek;
-	var	$dayName;
-	var $selectFunc;
-	var $forceDate;
-	var $drawOnClick;
-	var $drawServerDate;
-	var $drawHighlight;
-	var $startMonday;
+	public $width;
+	public $height;
+	public $visible;
+	public $rowsAndDate;
+	public $workDays;
+	public $preMonthDays;
+	public $nextMonthDays;
+	public $weekEnd;
+	public	$backgroundNames;
+	public	$todayBorder;
+	public	$todayBackground;
+	public	$todayFontColor;
+	public	$toWeekBackground;
+	public $clickedBorder;
+	public $clickedWeek;
+	public	$dayName;
+	public $selectFunc;
+	public $forceDate;
+	public $drawOnClick;
+	public $drawServerDate;
+	public $drawHighlight;
+	public $startMonday;
 	function __construct($params) {
 		global $myPid;
 		$this->creatorPid = $myPid;

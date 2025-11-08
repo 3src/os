@@ -101,13 +101,13 @@ class zipfile
 		Copyright (C) Joshua Townsend and licensed under the GPL
 		Version 1.0
 	*/
-	var $datasec = array(); // array to store compressed data
-	var $files = array(); // array of uncompressed files
-	var $dirs = array(); // array of directories that have been created already
-	var $ctrl_dir = array(); // central directory
-	var $eof_ctrl_dir = "\x50\x4b\x05\x06\x00\x00\x00\x00"; //end of Central directory record
-	var $old_offset = 0;
-	var $basedir = ".";
+	public $datasec = array(); // array to store compressed data
+	public $files = array(); // array of uncompressed files
+	public $dirs = array(); // array of directories that have been created already
+	public $ctrl_dir = array(); // central directory
+	public $eof_ctrl_dir = "\x50\x4b\x05\x06\x00\x00\x00\x00"; //end of Central directory record
+	public $old_offset = 0;
+	public $basedir = ".";
 
 	function create_dir($name) // Adds a directory to the zip with the name $name
 	{

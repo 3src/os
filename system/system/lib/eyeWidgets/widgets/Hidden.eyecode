@@ -21,23 +21,23 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Hidden {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//global widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $text;
+	public $text;
 
 	function __construct($params) {
 		global $myPid;

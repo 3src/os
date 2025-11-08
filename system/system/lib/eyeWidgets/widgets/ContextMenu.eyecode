@@ -17,13 +17,13 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class ContextMenu {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 	//global widgets options without default
-	var $name;
-	var $father;
-	var $showed = 0;
-	var $sFather;
-	var $mFather;
+	public $name;
+	public $father;
+	public $showed = 0;
+	public $sFather;
+	public $mFather;
 
 	function __construct($params) {
 		global $myPid;

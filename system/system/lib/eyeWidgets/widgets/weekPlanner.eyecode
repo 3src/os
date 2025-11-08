@@ -21,37 +21,37 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class weekPlanner {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
-	var $showed = 0;
-	var $dayFrom;
-	var $dayEven;
-	var $hourFrom;
-	var $hourEven;
-	var $dateString;
+	public $showed = 0;
+	public $dayFrom;
+	public $dayEven;
+	public $hourFrom;
+	public $hourEven;
+	public $dateString;
 	//custom widget options
-	var $title;
-	var $width;
-	var $pid;
-	var $rowHeight;
-	var $parts;
-	var $startMonday;
-	var $date;
-	var $weekDays;
-	var $selectedCalendar;
-	var $defaultEvenText;
-	var $calendarsText;
-	var $notes = array();
+	public $title;
+	public $width;
+	public $pid;
+	public $rowHeight;
+	public $parts;
+	public $startMonday;
+	public $date;
+	public $weekDays;
+	public $selectedCalendar;
+	public $defaultEvenText;
+	public $calendarsText;
+	public $notes = array();
 	function __construct($params) {
 		global $myPid;
 		$this->creatorPid = $myPid;

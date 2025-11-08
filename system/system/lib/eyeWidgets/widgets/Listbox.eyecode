@@ -21,31 +21,31 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Listbox {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
-	var $visible;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
+	public $visible;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $width;
-	var $height;
-	var $border;
-	var $orientation;
-    var $signal;
-    var $mode;
-    var $rowSize;
-    var $disableMsg;
-    var $selected;
+	public $width;
+	public $height;
+	public $border;
+	public $orientation;
+    public $signal;
+    public $mode;
+    public $rowSize;
+    public $disableMsg;
+    public $selected;
     
 	function __construct($params) {
 		if(!is_array($params)){

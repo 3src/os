@@ -14,11 +14,11 @@ define("SASL_NOMECH",  -4);
 
 class sasl_interact_class
 {
-	var $id;
-	var $challenge;
-	var $prompt;
-	var $default_result;
-	var $result;
+	public $id;
+	public $challenge;
+	public $prompt;
+	public $default_result;
+	public $result;
 };
 
 /*
@@ -76,7 +76,7 @@ class sasl_client_class
 	</variable>
 {/metadocument}
 */
-	var $error='';
+	public $error='';
 
 /*
 {metadocument}
@@ -92,7 +92,7 @@ class sasl_client_class
 	</variable>
 {/metadocument}
 */
-	var $mechanism='';
+	public $mechanism='';
 
 /*
 {metadocument}
@@ -110,15 +110,15 @@ class sasl_client_class
 	</variable>
 {/metadocument}
 */
-	var $encode_response=1;
+	public $encode_response=1;
 
 	/* Private variables */
 
-	var $driver;
-	var $drivers=array(
+	public $driver;
+	public $drivers=array(
 		"PLAIN"    => array("plain_sasl_client_class",    "plain_sasl_client.eyecode"    )
 	);
-	var $credentials=array();
+	public $credentials=array();
 
 	/* Public functions */
 

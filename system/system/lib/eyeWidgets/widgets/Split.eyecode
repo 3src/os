@@ -24,28 +24,28 @@ define('SPLIT_HORIZONTAL',2);
 class Split {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
-	var $visible;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
+	public $visible;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $width;
-	var $height;
-	var $orientation;
-	var $position;
-	var $sendResizeMsg;
-	var $sigResize;
+	public $width;
+	public $height;
+	public $orientation;
+	public $position;
+	public $sendResizeMsg;
+	public $sigResize;
 
 	function __construct($params) {
 		global $myPid;

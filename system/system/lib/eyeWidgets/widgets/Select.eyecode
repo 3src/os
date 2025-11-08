@@ -21,31 +21,31 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Select {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//global widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
 	//friends abstraction
-	var $friends = "''";
+	public $friends = "''";
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $enabled;
-	var $visible;
-	var $option;
-	var $width;
-	var $events;
-	var $selected;
+	public $enabled;
+	public $visible;
+	public $option;
+	public $width;
+	public $events;
+	public $selected;
 
 	function __construct($params) {
 		global $myPid;

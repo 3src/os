@@ -15,10 +15,10 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 */
 
 class project{
-	var $workPath;
-	var $files;
-	var	$type;
-	var $src;
+	public $workPath;
+	public $files;
+	public	$type;
+	public $src;
 
 	function project($params){
 			if(isset($params['files']) && is_array($params['files'])){

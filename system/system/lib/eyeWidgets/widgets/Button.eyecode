@@ -22,42 +22,42 @@ class Button {
 
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
 
 	//custom widget options
-	var $enabled;
-	var $visible;
-	var $caption;
-	var $highlight;
-	var $tokens;
-	var $width;
-	var $height;
-	var $img;
+	public $enabled;
+	public $visible;
+	public $caption;
+	public $highlight;
+	public $tokens;
+	public $width;
+	public $height;
+	public $img;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//friends abstraction
-	var $friends="''";
+	public $friends="''";
 
 	//event handling
-	var $disableMsg = 0;
-	var $signal;
-	var $forceMsg;
-	var $imgX;
-	var $imgY;
-	var $imgWidth;
-	var $imgHeight;
+	public $disableMsg = 0;
+	public $signal;
+	public $forceMsg;
+	public $imgX;
+	public $imgY;
+	public $imgWidth;
+	public $imgHeight;
 
 	//constructor
 	function __construct($params) {

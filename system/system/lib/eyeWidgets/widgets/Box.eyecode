@@ -21,27 +21,27 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
 class Box {
 	//pid controller
 
-	var $creatorPid;
+	public $creatorPid;
 	//global widgets options without default
-	var $name;
-	var $father;
+	public $name;
+	public $father;
 
 	//generic widget options with default
-	var $x;
-	var $y;
-	var $horiz;
-	var $vert;
-	var $cent;
-	var $visible;
+	public $x;
+	public $y;
+	public $horiz;
+	public $vert;
+	public $cent;
+	public $visible;
 
-	var $showed = 0;
+	public $showed = 0;
 
 	//custom widget options
-	var $title;
-	var $width;
-	var $height;
-	var $fixed;
-	var $titleCss;
+	public $title;
+	public $width;
+	public $height;
+	public $fixed;
+	public $titleCss;
 
 	function __construct($params) {
 		global $myPid;

@@ -82,7 +82,7 @@ function lib_eyeSimpleDb_newDb($params){
 }
 
 class simpleDb{
-	var $dbDriver;
+	public $dbDriver;
 	function simpleDb($params,$dbDriver){
 		$this->dbDriver = $dbDriver;
 		if($params['host'] && $params['login']){
