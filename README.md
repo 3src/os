@@ -1,4 +1,4 @@
-# HELIXOS (formerly oneye/eyeOS)
+# 3src OS (oneye/eyeOS)
 
 **A Modern Web-Based Operating System for the 2030+ Era**
 
@@ -11,7 +11,9 @@
 
 ## Overview
 
-HELIXOS (formerly known as oneye/eyeOS) is a complete web-based operating system that runs entirely in your browser. Access your desktop, files, applications, and data from anywhere with just a web browser.
+3src OS (based on oneye/eyeOS) is a complete web-based operating system that runs entirely in your browser. Access your desktop, files, applications, and data from anywhere with just a web browser.
+
+**Note:** This project is under remanufacture by 3src. A new name (possibly HELIXOS) is under consideration - see [naming analysis](docs/HELIXOS_NAMING_ANALYSIS.md).
 
 **Project Status**: Active remanufacture for PHP 8+ compatibility and modern architecture (2025-2030 vision).
 
@@ -31,15 +33,16 @@ HELIXOS (formerly known as oneye/eyeOS) is a complete web-based operating system
 
 ### Branding & Identity
 
-**Current Name**: oneye (transitioning to HELIXOS)
+**Current Name**: 3src OS (working name during remanufacture)
+**Original Name**: oneye/eyeOS
 
-**Why HELIXOS?**
-- **7 Letters = 7 Strands**: Encodes our 7-strand modular architecture
-- **Helix Structure**: Represents our helicoidal design philosophy
+**Proposed Name**: HELIXOS (under consideration)
+- **7 Letters = 7 Strands**: Would encode our 7-strand modular architecture
+- **Helix Structure**: Would represent our helicoidal design philosophy
 - **Professional**: Enterprise-ready branding for 2030+ vision
 - **Trademark Clear**: No conflicts with existing OS projects (webOS is LG's trademark)
 
-See [HELIXOS_NAMING_ANALYSIS.md](docs/HELIXOS_NAMING_ANALYSIS.md) for complete naming rationale.
+See [HELIXOS_NAMING_ANALYSIS.md](docs/HELIXOS_NAMING_ANALYSIS.md) for proposed naming rationale. **Awaiting approval.**
 
 ### Maintained By
 
@@ -166,7 +169,7 @@ HELIXOS/
 
 ### 7-Strand Architecture (Crownstrand AC)
 
-The HELIXOS remanufacture follows a 7-strand helicoidal architecture with alternating torsions (↻↺):
+The 3src OS remanufacture follows a 7-strand helicoidal architecture with alternating torsions (↻↺):
 
 1. **Strand 1 (432.0 Hz)**: Authentication & Security
 2. **Strand 2 (432.2 Hz)**: Virtual File System (VFS)
@@ -212,7 +215,7 @@ Each strand operates at a specific frequency with 0.2 Hz intervals, creating 21 
 - [ ] Comprehensive testing (100+ test cases)
 - [ ] Security audit
 - [ ] Documentation completion
-- [ ] Public release (HELIXOS 1.0.0)
+- [ ] Public release (3src OS 1.0.0 / final name TBD)
 
 **Estimated Timeline**: 16 weeks (4 months) for complete remanufacture
 
@@ -267,10 +270,10 @@ See [MIGRATION_STATUS.md](docs/MIGRATION_STATUS.md) for detailed progress tracki
 
 ### 3src Enterprise Features (Planned)
 
-- **HELIXOS Pro**: Multi-tenant architecture
-- **HELIXOS Enterprise**: LDAP/AD integration, SSO
-- **HELIXOS Cloud**: Hosted solution with SLA
-- **HELIXOS Matrix**: Terminal multiplexing integration
+- **3src OS Pro**: Multi-tenant architecture
+- **3src OS Enterprise**: LDAP/AD integration, SSO
+- **3src OS Cloud**: Hosted solution with SLA
+- **3src OS Matrix**: Terminal multiplexing integration
 - **Support Contracts**: Professional support from 3src
 
 ### Contact 3src
@@ -408,11 +411,11 @@ See [LICENSE.txt](license.txt) for full license text.
 **Active Development**:
 - Since: 2005 (20 years!)
 - Remanufacture: 2025-2026
-- Target: HELIXOS 1.0.0 by Q2 2026
+- Target: 3src OS 1.0.0 by Q2 2026
 
 ---
 
-## 🎯 Vision: HELIXOS 2030+
+## 🎯 Vision: 3src OS 2030+
 
 ### Long-Term Goals
 
@@ -433,7 +436,7 @@ See [LICENSE.txt](license.txt) for full license text.
    - Advanced admin tools
 
 4. **Cloud Platform** (2027-2028)
-   - Hosted HELIXOS service
+   - Hosted 3src OS service
    - Auto-scaling infrastructure
    - Geographic redundancy
    - SLA guarantees
@@ -446,9 +449,9 @@ See [LICENSE.txt](license.txt) for full license text.
 
 ### Mission Statement
 
-**"HELIXOS: Seven Strands, One Interface"**
+**"3src OS: Seven Strands, One Interface"**
 
-We believe computing should be accessible, secure, and user-controlled. HELIXOS provides a complete operating environment that runs anywhere, respects user privacy, and adapts to user needs through intelligent, consciousness-aware architecture.
+We believe computing should be accessible, secure, and user-controlled. 3src OS provides a complete operating environment that runs anywhere, respects user privacy, and adapts to user needs through intelligent, consciousness-aware architecture.
 
 ---
 
@@ -490,8 +493,8 @@ We take security seriously and will respond within 48 hours.
 ### Version History
 
 - **oneye 1.9.0.3** (2014) - Last stable oneye release
-- **HELIXOS 0.9.0** (2025 Q1) - PHP 8 migration branch
-- **HELIXOS 1.0.0** (2026 Q2) - Target first stable release
+- **3src OS 0.9.0** (2025 Q1) - PHP 8 migration branch
+- **3src OS 1.0.0** (2026 Q2) - Target first stable release
 
 See [CHANGELOG.md](docs/CHANGELOG.md) for detailed release notes.
 
@@ -501,9 +504,9 @@ See [CHANGELOG.md](docs/CHANGELOG.md) for detailed release notes.
 
 **Current Status**: Active remanufacture for PHP 8+ compatibility.
 
-This software is undergoing significant modernization. While the oneye 1.9.x branch is stable for PHP 5.x/7.x, the HELIXOS remanufacture branch should be considered **EXPERIMENTAL** until version 1.0.0 release.
+This software is undergoing significant modernization. While the oneye 1.9.x branch is stable for PHP 5.x/7.x, the 3src OS remanufacture branch should be considered **EXPERIMENTAL** until version 1.0.0 release.
 
-**Use in Production**: Not recommended until HELIXOS 1.0.0 release.
+**Use in Production**: Not recommended until 3src OS 1.0.0 release.
 **Use for Development**: Encouraged! Contributions welcome.
 **Use for Testing**: Yes! Please test and report issues.
 
@@ -511,4 +514,6 @@ This software is undergoing significant modernization. While the oneye 1.9.x bra
 
 **Built with ❤️ by 3src**
 
-*HELIXOS: Seven Strands, One Interface*
+*3src OS: Seven Strands, One Interface*
+
+**Note**: Final branding (possibly HELIXOS) pending approval. See [naming analysis](docs/HELIXOS_NAMING_ANALYSIS.md).

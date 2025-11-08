@@ -1,6 +1,6 @@
-# HELIXOS Documentation Index
+# 3src OS Documentation Index
 
-**Complete documentation for HELIXOS (formerly oneye/eyeOS)**
+**Complete documentation for 3src OS (oneye/eyeOS remanufacture)**
 
 **Maintained by**: 3src (Camille Roy) <robot@pastamp.com>
 **Last Updated**: 2025-11-08

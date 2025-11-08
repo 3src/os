@@ -1,8 +1,10 @@
-# HELIXOS PHP 8 Migration Status
+# 3src OS PHP 8 Migration Status
 
 **Real-time status tracking for the PHP 8+ remanufacture**
 
-**Last Updated**: 2025-11-08 15:30 UTC
+**Note**: Project currently named "3src OS" pending final branding decision. HELIXOS is under consideration - see [naming analysis](HELIXOS_NAMING_ANALYSIS.md).
+
+**Last Updated**: 2025-11-08 16:00 UTC
 **Current Phase**: Phase 2 - Quick Wins
 **Overall Progress**: 8% complete
 
@@ -21,7 +23,7 @@ Overall: ██░░░░░░░░░░░░░░░░░░ 8%
 ```
 
 **Timeline**: Week 1 of 16 (Q1 2025 - Q2 2026)
-**Target**: HELIXOS 1.0.0 by Q2 2026
+**Target**: 3src OS 1.0.0 by Q2 2026 (final name TBD)
 
 ---
 
@@ -405,5 +407,5 @@ This document is updated:
 ---
 
 **Maintained by**: 3src (Camille Roy) <robot@pastamp.com>
-**Project**: HELIXOS (formerly oneye/eyeOS)
-**Target**: HELIXOS 1.0.0 (Q2 2026)
+**Project**: 3src OS (formerly oneye/eyeOS)
+**Target**: 3src OS 1.0.0 (Q2 2026)
