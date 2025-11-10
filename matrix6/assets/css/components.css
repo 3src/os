@@ -1,0 +1,56 @@
+/**
+ * UI Components
+ * BIOS screen, login prompt, portal interface
+ */
+
+/* BIOS Boot Screen */
+.bios-screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: #000;
+    color: #00ff41;
+    font-family: 'Inconsolata', monospace;
+    padding: 20px;
+    z-index: 1000;
+    font-size: 12px;
+    overflow-y: auto;
+}
+
+/* Login Prompt */
+.login-prompt {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border: 1px solid #00ff41;
+    border-radius: 5px;
+    color: #00ff41;
+    z-index: 1001;
+}
+
+.login-prompt input {
+    background: transparent;
+    border: 1px solid #00ff41;
+    color: #00ff41;
+    padding: 5px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.login-prompt button {
+    background: #00ff41;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-prompt button:hover {
+    background: #00cc33;
+}
