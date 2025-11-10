@@ -1,0 +1,276 @@
+╔══════════════════════════════════════════════════════════════════╗
+║               6MATRIX - Installation Instructions                 ║
+║                3SRC Terminal - Modular Version                    ║
+╚══════════════════════════════════════════════════════════════════╝
+
+ARCHIVE: 6MATRIX.tar.gz (23KB)
+FILES: 31 files, 2,983 lines of code
+TARGET: 4liod/4liod/3SRC/6MATRIX
+
+╔══════════════════════════════════════════════════════════════════╗
+║                    WHAT'S IN THE ARCHIVE                          ║
+╚══════════════════════════════════════════════════════════════════╝
+
+This archive contains the complete modular matrix6 terminal system:
+
+📁 STRUCTURE:
+matrix6/
+├── config.php                 # Central configuration
+├── index.php                  # Main entry point
+├── api.php                    # AJAX API endpoint
+│
+├── core/                      # Core system classes
+│   ├── CommandInterface.php   # Command interface definition
+│   ├── CommandRouter.php      # Routes commands to handlers
+│   ├── Response.php           # HTTP response helper
+│   └── SystemInfo.php         # Real system specifications
+│
+├── commands/                  # 11 Command handlers
+│   ├── HelpCommand.php
+│   ├── ClearCommand.php
+│   ├── SystemInfoCommand.php
+│   ├── EmailCommand.php
+│   ├── BashCommand.php
+│   ├── PortalCommand.php
+│   ├── FileUploadCommand.php
+│   ├── AlgebraCommand.php
+│   ├── ArithmeticCommand.php
+│   ├── FinanceCommand.php
+│   ├── SearchCommand.php
+│   └── TrigoCommand.php
+│
+├── auth/                      # Authentication
+│   └── LoginHandler.php
+│
+├── assets/                    # Frontend assets
+│   ├── css/                   # 3 CSS files
+│   │   ├── terminal.css
+│   │   ├── animations.css
+│   │   └── components.css
+│   └── js/                    # 5 JavaScript modules
+│       ├── boot.js
+│       ├── auth.js
+│       ├── effects.js
+│       ├── portal.js
+│       └── terminal.js
+│
+└── docs/                      # Documentation
+    ├── README.md
+    ├── ARCHITECTURE.md
+    └── SYSTEM_SPECS_FEATURE.md
+
+╔══════════════════════════════════════════════════════════════════╗
+║            INSTALLATION TO 4liod/4liod/3SRC/6MATRIX              ║
+╚══════════════════════════════════════════════════════════════════╝
+
+METHOD 1: Extract to Repository (Recommended)
+──────────────────────────────────────────────
+
+1. Navigate to your 4liod/4liod repository:
+   cd /path/to/4liod/4liod
+
+2. Create the 3SRC directory if it doesn't exist:
+   mkdir -p 3SRC
+
+3. Extract the archive into 3SRC:
+   tar -xzf /path/to/6MATRIX.tar.gz -C 3SRC/
+
+4. Rename the extracted directory:
+   mv 3SRC/matrix6 3SRC/6MATRIX
+
+5. Add to git:
+   git add 3SRC/6MATRIX
+   git commit -m "Add 6MATRIX modular terminal system"
+   git push
+
+METHOD 2: Manual Upload to GitHub
+──────────────────────────────────
+
+1. Extract the archive locally:
+   tar -xzf 6MATRIX.tar.gz
+
+2. Navigate to: https://github.com/4liod/4liod/tree/main/3SRC
+
+3. Click "Add file" → "Upload files"
+
+4. Upload the entire matrix6 folder contents
+
+5. Rename to 6MATRIX via GitHub interface
+
+METHOD 3: Direct Git Commands
+──────────────────────────────
+
+# Clone the repository
+git clone https://github.com/4liod/4liod.git
+cd 4liod
+
+# Create directory structure
+mkdir -p 3SRC
+
+# Extract archive
+tar -xzf /path/to/6MATRIX.tar.gz -C 3SRC/
+mv 3SRC/matrix6 3SRC/6MATRIX
+
+# Commit and push
+git add 3SRC/6MATRIX
+git commit -m "Add 6MATRIX modular terminal system
+
+Complete modular terminal interface with:
+- Modular PHP architecture (Command Pattern)
+- Real system specifications (CPU, RAM, disk)
+- 11 terminal commands
+- BIOS boot sequence with real hardware info
+- Matrix rain effects and portal interface
+
+Total: 31 files, 2,983 lines of code"
+
+git push origin main
+
+╔══════════════════════════════════════════════════════════════════╗
+║                      CONFIGURATION                                ║
+╚══════════════════════════════════════════════════════════════════╝
+
+After installation, edit config.php to customize:
+
+1. TERMINAL SETTINGS:
+   define('TERMINAL_TITLE', '3SRC Terminal Access TA103');
+   define('TERMINAL_USERNAME', '3src');
+   define('TERMINAL_DEFAULT_PRIME', 17); // Login password
+
+2. SECURITY SETTINGS:
+   define('ENABLE_SHELL_EXEC', false);  // Disable for production!
+   define('ENABLE_FILE_UPLOAD', false); // Disable for production!
+
+3. EMAIL SETTINGS:
+   define('EMAIL_FROM', '3src@localhost');
+
+4. BRANDING:
+   define('SYSTEM_VENDOR', '3SRC Camille Roy');
+   // Update other constants as needed
+
+╔══════════════════════════════════════════════════════════════════╗
+║                      USAGE & ACCESS                               ║
+╚══════════════════════════════════════════════════════════════════╝
+
+WEB ACCESS:
+   http://your-domain.com/3SRC/6MATRIX/
+
+DEFAULT LOGIN:
+   Username: 3src
+   Password: 17
+
+AVAILABLE COMMANDS:
+   help     - Display available commands
+   sysinfo  - Show real system specifications
+   clear    - Clear terminal screen
+   mail     - Send email
+   bash     - Execute shell commands (if enabled)
+   portal   - Open portal interface
+   algebra  - Launch Algebra module
+   arithmetic - Launch Arithmetic module
+   finance  - Launch Finance module
+   search   - Launch Search module
+   trigo    - Launch Trigonometry module
+
+╔══════════════════════════════════════════════════════════════════╗
+║                   FEATURES & HIGHLIGHTS                           ║
+╚══════════════════════════════════════════════════════════════════╝
+
+✨ MODULAR ARCHITECTURE:
+   - Command Pattern for easy extensibility
+   - Auto-discovery of new commands
+   - Separated concerns (MVC-like)
+   - RESTful API endpoint
+
+✨ REAL SYSTEM SPECS:
+   - Fetches actual CPU, RAM, disk info
+   - Reads from /proc/cpuinfo and /proc/meminfo
+   - Detects HyperThreading, Virtualization, NX Bit
+   - Shows real Linux distribution and kernel version
+
+✨ TERMINAL INTERFACE:
+   - Matrix rain animation
+   - BIOS boot sequence with real hardware
+   - Glitch effects
+   - Portal interface for SHA-1 decryption
+   - Command history navigation (up/down arrows)
+
+✨ SECURITY:
+   - Read-only system info queries
+   - Optional shell execution (disabled by default)
+   - Input sanitization
+   - Configurable security settings
+
+╔══════════════════════════════════════════════════════════════════╗
+║                      DOCUMENTATION                                ║
+╚══════════════════════════════════════════════════════════════════╝
+
+After installation, view the documentation:
+
+📖 README.md
+   - Installation guide
+   - Available commands
+   - Adding new commands
+   - Security notes
+
+📖 ARCHITECTURE.md
+   - Detailed architecture explanation
+   - Design patterns used
+   - Component responsibilities
+   - Extensibility guide
+
+📖 SYSTEM_SPECS_FEATURE.md
+   - Real system specs feature
+   - Data sources
+   - Usage examples
+   - Security considerations
+
+╔══════════════════════════════════════════════════════════════════╗
+║                    REQUIREMENTS                                   ║
+╚══════════════════════════════════════════════════════════════════╝
+
+✅ PHP 7.4+ (recommended: PHP 8.0+)
+✅ Web server (Apache/Nginx)
+✅ Linux OS (for full system specs support)
+✅ Modern browser with JavaScript enabled
+
+Optional:
+   - shell_exec() enabled for extended features
+   - /proc filesystem for system info
+   - mail() function for email features
+
+╔══════════════════════════════════════════════════════════════════╗
+║                      QUICK START                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+1. Extract the archive
+2. Upload to 3SRC/6MATRIX in your repository
+3. Configure config.php (set ENABLE_SHELL_EXEC=false for security)
+4. Access via web browser
+5. Login: 3src / 17
+6. Type 'help' to see available commands
+7. Type 'sysinfo' to see real system specifications
+
+╔══════════════════════════════════════════════════════════════════╗
+║                      SUPPORT                                      ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Project: 3SRC Terminal (Matrix6) - Modular Version
+Version: 1.0.0
+Created: November 2025
+License: All Rights Reserved - Copyright (C) 1980-2025
+
+For issues or questions, refer to the documentation files included
+in the archive.
+
+═══════════════════════════════════════════════════════════════════
+
+Archive created: November 10, 2025
+Total size: 23KB (compressed)
+Files: 31
+Lines of code: 2,983
+
+Extracted from: 3src/os repository
+Target location: 4liod/4liod/3SRC/6MATRIX
+
+═══════════════════════════════════════════════════════════════════
