@@ -13,11 +13,13 @@ matrix6/
 ├── core/                      # Core system classes
 │   ├── CommandInterface.php   # Command interface definition
 │   ├── CommandRouter.php      # Routes commands to handlers
-│   └── Response.php           # HTTP response helper
+│   ├── Response.php           # HTTP response helper
+│   └── SystemInfo.php         # Real system specifications provider
 │
 ├── commands/                  # Command handlers
 │   ├── HelpCommand.php        # Display available commands
 │   ├── ClearCommand.php       # Clear terminal
+│   ├── SystemInfoCommand.php  # Display real system specifications
 │   ├── EmailCommand.php       # Send emails
 │   ├── BashCommand.php        # Execute shell commands
 │   ├── PortalCommand.php      # Open portal interface
@@ -53,17 +55,19 @@ matrix6/
 - **Authentication**: Prime number-based login system
 - **Configuration**: Centralized config file
 - **API Endpoint**: RESTful API for AJAX requests
+- **Real System Information**: Fetches actual hardware specs (CPU, RAM, disk, etc.)
 
 ### Frontend (JavaScript)
 - **Terminal Interface**: Interactive command-line interface
 - **Matrix Rain Effect**: Animated background
-- **BIOS Boot Sequence**: Simulated system initialization
+- **BIOS Boot Sequence**: Displays REAL system specifications at boot
 - **Portal Interface**: SHA-1 decryption UI
 - **Glitch Effects**: Cyberpunk-style text effects
 
 ### Available Commands
 - `help` - Display available commands
 - `clear` - Clear terminal screen
+- `sysinfo` - Display detailed real system specifications (CPU, memory, disk, network)
 - `mail` - Send email
 - `bash` - Execute shell commands
 - `portal` - Open portal interface

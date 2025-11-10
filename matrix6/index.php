@@ -6,6 +6,10 @@
 
 // Load configuration
 $config = require_once __DIR__ . '/config.php';
+
+// Load SystemInfo for real hardware data
+require_once CORE_PATH . '/SystemInfo.php';
+$sysInfo = SystemInfo::getAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,17 +39,18 @@ $config = require_once __DIR__ . '/config.php';
         <p>Initializing DVD Devices .. Done</p>
         <p>Internet Keyboard Detected</p>
         <p>Detecting Internet Drives ...</p>
-        <p>Memory Testing: <?php echo SYSTEM_MEMORY; ?> OK</p>
+        <p>Memory Testing: <?php echo $sysInfo['memory_gb']; ?>GB OK</p>
         <p>Memory Map Passed - ECC Verified</p>
-        <p>CPU Detected: <?php echo SYSTEM_CPU_COUNT; ?> x <?php echo SYSTEM_CPU_TYPE; ?></p>
-        <p>-> 8 Multi-threaded CPU found</p>
-        <p>Hyperthreading Technology - Enabled</p>
-        <p>VT-x Virtualization - Enabled</p>
-        <p>NX Bit - Enabled</p>
+        <p>CPU Detected: <?php echo $sysInfo['cpu_count']; ?> x <?php echo $sysInfo['cpu_arch']; ?> Processors</p>
+        <p>-> <?php echo $sysInfo['cpu_model']; ?></p>
+        <p>Hyperthreading Technology - <?php echo $sysInfo['has_ht'] ? 'Enabled' : 'Disabled'; ?></p>
+        <p>VT-x Virtualization - <?php echo $sysInfo['has_vt'] ? 'Enabled' : 'Disabled'; ?></p>
+        <p>NX Bit - <?php echo $sysInfo['has_nx'] ? 'Enabled' : 'Disabled'; ?></p>
         <p>AHCI Controller Initialized - 4 Channels Active</p>
-        <p>ZFS File System Found</p>
-        <p>Detected Storage: <?php echo SYSTEM_STORAGE; ?></p>
-        <p>Maximum <?php echo SYSTEM_MAX_STORAGE; ?> File System Ready</p>
+        <p>File System: <?php echo $sysInfo['distribution']; ?></p>
+        <p>Kernel: <?php echo $sysInfo['kernel']; ?></p>
+        <p>Detected Storage: <?php echo $sysInfo['disk_space_human']; ?></p>
+        <p>Hostname: <?php echo $sysInfo['hostname']; ?></p>
         <p>USB Legacy Support - Enabled</p>
         <p>PXE Boot Agent - Enabled</p>
         <p>DVD Boot Agent - Enabled</p>
