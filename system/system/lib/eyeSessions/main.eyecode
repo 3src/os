@@ -48,7 +48,17 @@ function lib_eyeSessions_startSession($params=null){
 
 	//Creating the new session
 	$sessionId = md5(uniqid(rand()));
-	setcookie(COOKIE_ID,$sessionId,COOKIE_EXPIRE);
+
+	// Modern cookie with all security attributes for Chromium compatibility
+	setcookie(COOKIE_ID, $sessionId, [
+		'expires' => COOKIE_EXPIRE,
+		'path' => '/',
+		'domain' => '',  // Current domain
+		'secure' => isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on',
+		'httponly' => true,
+		'samesite' => 'Lax'  // Chromium-compatible setting
+	]);
+
 	$_SESSION = array();
 	return true;
 }

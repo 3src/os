@@ -548,4 +548,105 @@ When executing tests, use this template to record results:
 6. **Browser quirks** - Test in all target browsers, not just Chrome
 7. **Mobile testing** - Don't forget the iPhone and mobile interfaces
 
+## 4. Cookie & Session Management Tests
+
+**Component:** eyeSessions library (browser compatibility)
+**Migration Date:** 2025-11-12
+**Issue:** Chromium cookie compatibility (missing SameSite attribute)
+**File:** system/system/lib/eyeSessions/main.eyecode:51
+
+### Browser Compatibility Tests
+
+| Test ID | Description | Priority | Stage | Status | Notes |
+|---------|-------------|----------|-------|--------|-------|
+| COOKIE-001 | Login with Chrome (latest) | 🔴 P0 | Stage 1 | ⏳ PENDING | Primary Chromium browser |
+| COOKIE-002 | Login with Edge (latest) | 🔴 P0 | Stage 1 | ⏳ PENDING | Microsoft Chromium browser |
+| COOKIE-003 | Login with Firefox (latest) | 🔴 P0 | Stage 1 | ⏳ PENDING | Regression test |
+| COOKIE-004 | Login with Brave | 🟡 P1 | Stage 1 | ⏳ PENDING | Privacy-focused Chromium |
+| COOKIE-005 | Login with Opera | 🔵 P2 | Stage 2 | ⏳ PENDING | Alternative Chromium |
+| COOKIE-006 | Login with Safari (macOS/iOS) | 🔵 P2 | Stage 2 | ⏳ PENDING | WebKit browser |
+
+### Session Persistence Tests
+
+| Test ID | Description | Priority | Stage | Status | Notes |
+|---------|-------------|----------|-------|--------|-------|
+| SESSION-001 | Session survives page refresh | 🔴 P0 | Stage 1 | ⏳ PENDING | Basic persistence |
+| SESSION-002 | Session survives navigation between pages | 🔴 P0 | Stage 1 | ⏳ PENDING | Multi-page navigation |
+| SESSION-003 | Session shared across multiple tabs | 🔴 P0 | Stage 1 | ⏳ PENDING | Multi-tab behavior |
+| SESSION-004 | Session expires on logout | 🔴 P0 | Stage 1 | ⏳ PENDING | Clean logout |
+| SESSION-005 | Session persists for 24 hours | 🟡 P1 | Stage 2 | ⏳ PENDING | Long-lived cookie test |
+| SESSION-006 | Session cleared on browser close (if session-only) | 🔵 P2 | Stage 2 | ⏳ PENDING | Session vs persistent cookie |
+
+### Cookie Attribute Verification Tests
+
+| Test ID | Description | Priority | Stage | Status | Notes |
+|---------|-------------|----------|-------|--------|-------|
+| ATTR-001 | Verify cookie has SameSite=Lax attribute | 🔴 P0 | Stage 1 | ⏳ PENDING | Check in DevTools |
+| ATTR-002 | Verify cookie has HttpOnly flag | 🔴 P0 | Stage 1 | ⏳ PENDING | XSS protection |
+| ATTR-003 | Verify cookie has Secure flag (HTTPS only) | 🔴 P0 | Stage 1 | ⏳ PENDING | HTTPS security |
+| ATTR-004 | Verify cookie Path is '/' | 🟡 P1 | Stage 1 | ⏳ PENDING | Site-wide access |
+| ATTR-005 | Verify cookie Domain is correct | 🟡 P1 | Stage 1 | ⏳ PENDING | Domain scope |
+| ATTR-006 | Verify cookie Expires timestamp | 🔵 P2 | Stage 1 | ⏳ PENDING | 2038-01-19 max value |
+
+### Security Tests
+
+| Test ID | Description | Priority | Stage | Status | Notes |
+|---------|-------------|----------|-------|--------|-------|
+| SEC-001 | Cookie not accessible via document.cookie | 🔴 P0 | Stage 1 | ⏳ PENDING | HttpOnly verification |
+| SEC-002 | Cookie not sent over HTTP (only HTTPS) | 🔴 P0 | Stage 1 | ⏳ PENDING | Secure flag verification |
+| SEC-003 | Cookie not sent in cross-site requests | 🟡 P1 | Stage 2 | ⏳ PENDING | SameSite=Lax verification |
+| SEC-004 | Session ID is random and unpredictable | 🟡 P1 | Stage 1 | ⏳ PENDING | md5(uniqid(rand())) strength |
+
+### Functional Tests
+
+| Test ID | Description | Priority | Stage | Status | Notes |
+|---------|-------------|----------|-------|--------|-------|
+| FUNC-001 | eyeDesk launches after login | 🔴 P0 | Stage 1 | ⏳ PENDING | Desktop environment |
+| FUNC-002 | eyeFiles file operations work | 🔴 P0 | Stage 1 | ⏳ PENDING | AJAX operations |
+| FUNC-003 | eyeConsole launches and functions | 🟡 P1 | Stage 1 | ⏳ PENDING | Console app |
+| FUNC-004 | Multiple apps can run simultaneously | 🟡 P1 | Stage 2 | ⏳ PENDING | Multi-app session |
+| FUNC-005 | File upload works correctly | 🟡 P1 | Stage 2 | ⏳ PENDING | Form POST with cookies |
+
+### Regression Tests
+
+| Test ID | Description | Priority | Stage | Status | Notes |
+|---------|-------------|----------|-------|--------|-------|
+| REG-001 | Old sessions continue to work | 🔴 P0 | Stage 3 | ⏳ PENDING | Backward compatibility |
+| REG-002 | Flash upload fix still works | 🔵 P2 | Stage 2 | ⏳ PENDING | Line 86-87 flash trick |
+| REG-003 | API endpoint (?api=1) works | 🟡 P1 | Stage 2 | ⏳ PENDING | XML-RPC with cookies |
+| REG-004 | Extern file serving works | 🟡 P1 | Stage 2 | ⏳ PENDING | Line 50-52 extern files |
+
+### Test Environment Setup
+
+**Required:**
+1. PHP 7.3+ environment (for setcookie() array syntax)
+2. HTTPS server (to test Secure flag)
+3. Multiple browsers installed (Chrome, Firefox, Edge)
+4. Browser DevTools for cookie inspection
+
+**Test URLs:**
+- Production: https://os.pastamp.com
+- Staging: (if available)
+- Local: https://localhost/os (with self-signed cert)
+
+**Pre-Test Checklist:**
+- [ ] Clear all browser cookies for test domain
+- [ ] Clear browser cache
+- [ ] Disable browser extensions (test in Incognito/Private mode)
+- [ ] Open browser DevTools → Application → Cookies before login
+- [ ] Document PHP version: `php -v`
+- [ ] Document browser version: Check About page
+
+**Test Procedure:**
+1. Open browser DevTools (F12) → Application → Cookies
+2. Navigate to os.pastamp.com
+3. Login with test credentials
+4. Verify cookie attributes in DevTools
+5. Test session persistence (refresh, navigate, new tab)
+6. Test application functionality
+7. Logout and verify cookie cleared
+8. Document results with screenshots
+
+---
+
 **Remember:** A passing test proves the code works. A failing test proves we found it before the user did! 🎯

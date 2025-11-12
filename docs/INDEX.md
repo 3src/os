@@ -35,7 +35,8 @@
 | [PHPMAILER_MIGRATION.md](../PHPMAILER_MIGRATION.md) | PHPMailer 5.1 → 6.12.0 migration guide | 376 | ✅ Complete |
 | [VAR_KEYWORD_MIGRATION.md](../VAR_KEYWORD_MIGRATION.md) | var keyword replacement guide | 900+ | ✅ Complete |
 | [XMLRPC_MIGRATION.md](../XMLRPC_MIGRATION.md) | XML-RPC library PHP 8 compatibility | 900+ | ✅ Complete |
-| [TESTING_JOURNAL.md](../TESTING_JOURNAL.md) | 100+ test cases with status tracking | 450+ | 🔄 Updated regularly |
+| [CHROMIUM_COOKIE_FIX.md](../CHROMIUM_COOKIE_FIX.md) | Chromium cookie compatibility fix | 650+ | ✅ Complete |
+| [TESTING_JOURNAL.md](../TESTING_JOURNAL.md) | 135+ test cases with status tracking | 650+ | 🔄 Updated regularly |
 | [TEST_PLAN.md](../TEST_PLAN.md) | Critical P0 tests for production deployment | 800+ | ✅ Complete |
 | [RISK_ASSESSMENT.md](../RISK_ASSESSMENT.md) | Success probability & risk analysis | 900+ | ✅ Complete |
 
