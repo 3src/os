@@ -36,6 +36,7 @@
 | [VAR_KEYWORD_MIGRATION.md](../VAR_KEYWORD_MIGRATION.md) | var keyword replacement guide | 900+ | ✅ Complete |
 | [XMLRPC_MIGRATION.md](../XMLRPC_MIGRATION.md) | XML-RPC library PHP 8 compatibility | 900+ | ✅ Complete |
 | [CHROMIUM_COOKIE_FIX.md](../CHROMIUM_COOKIE_FIX.md) | Chromium cookie compatibility fix | 650+ | ✅ Complete |
+| [INSTALLATION_AND_ARCHITECTURE.md](../INSTALLATION_AND_ARCHITECTURE.md) | Complete installation & architecture guide | 1,100+ | ✅ Complete |
 | [TESTING_JOURNAL.md](../TESTING_JOURNAL.md) | 135+ test cases with status tracking | 650+ | 🔄 Updated regularly |
 | [TEST_PLAN.md](../TEST_PLAN.md) | Critical P0 tests for production deployment | 800+ | ✅ Complete |
 | [RISK_ASSESSMENT.md](../RISK_ASSESSMENT.md) | Success probability & risk analysis | 900+ | ✅ Complete |
