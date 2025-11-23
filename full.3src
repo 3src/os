@@ -1,0 +1,19 @@
+# Full Context - Tout inclure
+# Contexte pour compression complète sans filtres
+
+CONTEXT_NAME="full"
+CONTEXT_DESC="Full backup - All files included"
+
+# Inclure tout (laisser vide = tout inclure)
+INCLUDE_TYPES=""
+
+# Pas d'exclusions
+EXCLUDE_TYPES=""
+EXCLUDE_EXTS=""
+
+# Options
+INCLUDE_HIDDEN=1
+MAX_FILE_SIZE_MB=0
+
+# Commentaire
+# Backup complet de tout le contenu

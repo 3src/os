@@ -1,0 +1,22 @@
+# Docs Context - Documentation only
+# Contexte pour extraction de documentation uniquement
+
+CONTEXT_NAME="docs"
+CONTEXT_DESC="Documentation files only"
+
+# Types de documentation
+INCLUDE_TYPES="markdown text doc"
+
+# Extensions de documentation
+INCLUDE_EXTS=".md .markdown .txt .text .rst .adoc .pdf .doc .docx .odt"
+
+# Exclure tout le reste
+EXCLUDE_TYPES="code binary archive image"
+EXCLUDE_EXTS=""
+
+# Options
+INCLUDE_HIDDEN=0
+MAX_FILE_SIZE_MB=50
+
+# Commentaire
+# Parfait pour extraire toute la documentation d'un projet

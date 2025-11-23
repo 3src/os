@@ -1,0 +1,20 @@
+# Clean Context - Clean backup without junk
+# Contexte pour backup propre sans fichiers inutiles
+
+CONTEXT_NAME="clean"
+CONTEXT_DESC="Clean backup without binaries, caches and temporary files"
+
+# Inclure sources et docs
+INCLUDE_TYPES="code config markdown text"
+
+# Exclure binaires, archives et fichiers temporaires
+EXCLUDE_TYPES="binary archive"
+EXCLUDE_EXTS=".exe .bin .so .dll .o .a .pyc .class .zip .tar .gz .bz2 .tmp .cache .swp .swo .DS_Store .gitignore"
+
+# Options
+INCLUDE_HIDDEN=0
+MAX_FILE_SIZE_MB=100
+
+# Commentaire
+# Backup propre sans les fichiers compilés et temporaires
+# Idéal pour versionner ou transférer un projet

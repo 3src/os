@@ -1,0 +1,27 @@
+# Highlander Context - "There can be only one"
+# Contexte pour compression ultra-sélective : uniquement les fichiers essentiels
+
+# Description du contexte
+CONTEXT_NAME="highlander"
+CONTEXT_DESC="There can be only one - Only the essential files"
+
+# Types de fichiers à INCLURE (priorité haute)
+INCLUDE_TYPES="code config"
+
+# Extensions spécifiques à INCLURE
+INCLUDE_EXTS=".sh .php .js .py .json .yaml .yml .ini .conf .md"
+
+# Types à EXCLURE (priorité absolue)
+EXCLUDE_TYPES="binary archive image doc"
+
+# Extensions à EXCLURE
+EXCLUDE_EXTS=".exe .bin .so .dll .zip .tar .gz .jpg .png .pdf .tmp .cache"
+
+# Options spéciales
+INCLUDE_HIDDEN=0
+MAX_FILE_SIZE_MB=10
+
+# Commentaires
+# Ce contexte extrait uniquement le code source et les configs
+# Parfait pour les backups de développement sans les assets
+# "There can be only one" - seulement l'essentiel survit
