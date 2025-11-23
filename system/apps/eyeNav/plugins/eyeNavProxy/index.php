@@ -231,7 +231,7 @@ function url_parse($url, & $container)
             }
             else if ($dir !== '.')
             {
-                for ($dir = rawurldecode($dir), $new_dir = '', $i = 0, $count_i = strlen($dir); $i < $count_i; $new_dir .= strspn($dir{$i}, 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$-_.+!*\'(),?:@&;=') ? $dir{$i} : rawurlencode($dir{$i}), ++$i);
+                for ($dir = rawurldecode($dir), $new_dir = '', $i = 0, $count_i = strlen($dir); $i < $count_i; $new_dir .= strspn($dir[$i], 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$-_.+!*\'(),?:@&;=') ? $dir[$i] : rawurlencode($dir[$i]), ++$i);
                 $path[] = $new_dir;
             }
         }
@@ -264,7 +264,7 @@ function complete_url($url, $proxify = true)
     
     if ($sep_pos === false || $sep_pos > 5)
     {
-        switch ($url{0})
+        switch ($url[0])
         {
             case '/':
                 $url = substr($url, 0, 2) === '//' ? $GLOBALS['_base']['scheme'] . ':' . $url : $GLOBALS['_base']['scheme'] . '://' . $GLOBALS['_base']['host'] . $GLOBALS['_base']['port_ext'] . $url;
@@ -362,7 +362,7 @@ if ($GLOBALS['_iflags'] !== '')
 
     foreach ($GLOBALS['_flags'] as $flag_name => $flag_value)
     {
-        $GLOBALS['_flags'][$flag_name] = $GLOBALS['_frozen_flags'][$flag_name] ? $flag_value : (int)(bool)$GLOBALS['_iflags']{$i};
+        $GLOBALS['_flags'][$flag_name] = $GLOBALS['_frozen_flags'][$flag_name] ? $flag_value : (int)(bool)$GLOBALS['_iflags'][$i];
         $i++;
     }
 }
@@ -636,9 +636,14 @@ do
     {
         $GLOBALS['_request_headers']  .= "Authorization: Basic {$GLOBALS['_auth_creds'][$GLOBALS['_basic_auth_realm']]}\r\n";
     }
-    else if (list($GLOBALS['_basic_auth_realm'], $GLOBALS['_basic_auth_header']) = each($GLOBALS['_auth_creds']))
+    else if (!empty($GLOBALS['_auth_creds']) && is_array($GLOBALS['_auth_creds']))
     {
-        $GLOBALS['_request_headers'] .= "Authorization: Basic {$GLOBALS['_basic_auth_header']}\r\n";
+        reset($GLOBALS['_auth_creds']);
+        $GLOBALS['_basic_auth_realm'] = key($GLOBALS['_auth_creds']);
+        $GLOBALS['_basic_auth_header'] = current($GLOBALS['_auth_creds']);
+        if ($GLOBALS['_basic_auth_realm'] !== null) {
+            $GLOBALS['_request_headers'] .= "Authorization: Basic {$GLOBALS['_basic_auth_header']}\r\n";
+        }
     }
     if ($GLOBALS['_request_method'] == 'POST')
     {
@@ -768,7 +773,7 @@ do
             {
                 $domain = '.' . strtolower(str_replace('..', '.', trim($domain, '.')));
     
-                if ((!preg_match('#\Q' . $domain . '\E$#i', $GLOBALS['_url_parts']['host']) && $domain != '.' . $GLOBALS['_url_parts']['host']) || (substr_count($domain, '.') < 2 && $domain{0} == '.'))
+                if ((!preg_match('#\Q' . $domain . '\E$#i', $GLOBALS['_url_parts']['host']) && $domain != '.' . $GLOBALS['_url_parts']['host']) || (substr_count($domain, '.') < 2 && $domain[0] == '.'))
                 {
                     continue;
                 }
@@ -889,7 +894,7 @@ if (!isset($GLOBALS['_proxify'][$GLOBALS['_content_type']]))
 			echo $data;
 		}
     }
-    while (isset($data{0}));
+    while (isset($data[0]));
         
     fclose($GLOBALS['_socket']);
 	if (isset($handler)) { // oneye
@@ -916,7 +921,7 @@ do
     $data = @fread($GLOBALS['_socket'], 8192); // silenced to avoid the "normal" warning by a faulty SSL connection
     $GLOBALS['_response_body'] .= $data;
 }
-while (isset($data{0}));
+while (isset($data[0]));
    
 unset($data);
 fclose($GLOBALS['_socket']);

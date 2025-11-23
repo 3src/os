@@ -38,12 +38,12 @@ require_once EYE_ROOT . '/' . SYSTEM_DIR . '/' . LIB_DIR . '/eyeFileArchive/lib/
  */
 class File_Archive_Predicate_Ereg extends File_Archive_Predicate
 {
-    var $ereg;
+    public $ereg;
 
     /**
      * @param string $ereg is the regular expression
      */
-    function File_Archive_Predicate_Ereg($ereg)
+    function __construct($ereg)
     {
         $this->ereg = $ereg;
     }
@@ -52,7 +52,7 @@ class File_Archive_Predicate_Ereg extends File_Archive_Predicate
      */
     function isTrue(&$source)
     {
-        return (bool)ereg($this->ereg, $source->getFilename());
+        return (bool)preg_match('/' . str_replace('/', '\/', $this->ereg) . '/', $source->getFilename());
     }
 }
 

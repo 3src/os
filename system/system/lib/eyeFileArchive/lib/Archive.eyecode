@@ -39,7 +39,7 @@
 
 function File_Archive_cleanCache($file, $group)
 {
-    $file = split('_', $file);
+    $file = explode('_', $file);
     if (count($file) != 3) {
         return false; //not a File_Archive file, keep it
     }
@@ -361,7 +361,7 @@ class File_Archive
                     $realSymbolic = '';
                 }
                 require_once EYE_ROOT . '/' . SYSTEM_DIR . '/' . LIB_DIR . '/eyeFileArchive/lib/Archive/Reader/ChangeName/AddDirectory' . EYE_CODE_EXTENSION; // eyeOS
-                $tmp =& new File_Archive_Reader_ChangeName_AddDirectory(
+                $tmp = new File_Archive_Reader_ChangeName_AddDirectory(
                     $realSymbolic,
                     $result
                 );

@@ -283,29 +283,26 @@ function lib_eyeZip_createZip($params) {
     public $magic_quotes_status;
 
   // --------------------------------------------------------------------------------
-  // Function : PclZip()
+  // Function : __construct()
   // Description :
   //   Creates a PclZip object and set the name of the associated Zip archive
   //   filename.
   //   Note that no real action is taken, if the archive does not exist it is not
   //   created. Use create() for that.
   // --------------------------------------------------------------------------------
-  function PclZip($p_zipname)
+  function __construct($p_zipname)
   {
 
     // ----- Tests the zlib
     if (!function_exists('gzopen'))
     {
-      return false; // oneye
+      die('PclZip: gzopen() function is not available'); // Changed from return false
     }
 
     // ----- Set the attributes
     $this->zipname = $p_zipname;
     $this->zip_fd = 0;
     $this->magic_quotes_status = -1;
-
-    // ----- Return
-    return;
   }
   // --------------------------------------------------------------------------------
 

@@ -586,7 +586,7 @@ function get_part($stream, $msg_number, $mime_type, $structure = false,$part_num
 	}
 
 		if($structure->type == 1) /* multipart */ {
-		while(list($index, $sub_structure) = each($structure->parts)) {
+		foreach($structure->parts as $index => $sub_structure) {
 			if($part_number) {
 				$prefix = $part_number . '.';
 			}
