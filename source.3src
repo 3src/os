@@ -1,0 +1,21 @@
+# Source Context - Source code only (no configs)
+# Contexte pour code source pur
+
+CONTEXT_NAME="source"
+CONTEXT_DESC="Pure source code without configs or docs"
+
+# Uniquement le code
+INCLUDE_TYPES="code"
+
+# Exclure configs, docs, et tout le reste
+EXCLUDE_TYPES="config markdown text binary archive image doc"
+EXCLUDE_EXTS=".json .yaml .yml .ini .conf .md .txt .pdf"
+
+# Options
+INCLUDE_HIDDEN=0
+MAX_FILE_SIZE_MB=5
+
+# Commentaire
+# Uniquement le code source pur
+# Sans configs ni documentation
+# Pour analyse de code ou portage

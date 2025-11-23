@@ -1,0 +1,23 @@
+# Web Context - Web development files only
+# Contexte pour développement web
+
+CONTEXT_NAME="web"
+CONTEXT_DESC="Web development files - HTML, CSS, JS, PHP"
+
+# Types web
+INCLUDE_TYPES="code"
+
+# Extensions web spécifiques
+INCLUDE_EXTS=".html .htm .css .scss .sass .less .js .jsx .ts .tsx .vue .php .twig .blade .jsp"
+
+# Exclure les autres types
+EXCLUDE_TYPES="binary archive doc"
+EXCLUDE_EXTS=".exe .bin .zip .tar .gz .pdf"
+
+# Options
+INCLUDE_HIDDEN=0
+MAX_FILE_SIZE_MB=5
+
+# Commentaire
+# Parfait pour backup de projets web
+# Inclut frontend et backend web

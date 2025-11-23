@@ -1,0 +1,23 @@
+# Backend Context - Server-side code only
+# Contexte pour code backend uniquement
+
+CONTEXT_NAME="backend"
+CONTEXT_DESC="Backend/server-side code only"
+
+# Extensions backend
+INCLUDE_EXTS=".php .py .rb .java .go .cs .rs .kt .scala .clj .ex .erl .lua"
+
+# Inclure aussi les configs serveur
+INCLUDE_TYPES="config"
+
+# Exclure frontend et assets
+EXCLUDE_EXTS=".html .css .js .jsx .vue .jpg .png .gif .svg"
+EXCLUDE_TYPES="image doc archive"
+
+# Options
+INCLUDE_HIDDEN=0
+MAX_FILE_SIZE_MB=0
+
+# Commentaire
+# Pour backup de la logique serveur uniquement
+# Sans frontend ni assets

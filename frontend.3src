@@ -1,0 +1,23 @@
+# Frontend Context - Client-side code only
+# Contexte pour code frontend uniquement
+
+CONTEXT_NAME="frontend"
+CONTEXT_DESC="Frontend/client-side code and assets"
+
+# Extensions frontend
+INCLUDE_EXTS=".html .htm .css .scss .sass .less .js .jsx .ts .tsx .vue .svelte .json"
+
+# Inclure aussi les images pour le frontend
+INCLUDE_TYPES="image"
+
+# Exclure backend
+EXCLUDE_EXTS=".php .py .rb .java .go"
+EXCLUDE_TYPES="binary archive doc"
+
+# Options
+INCLUDE_HIDDEN=0
+MAX_FILE_SIZE_MB=10
+
+# Commentaire
+# Pour backup du code frontend avec assets
+# HTML, CSS, JS, frameworks modernes

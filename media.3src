@@ -1,0 +1,22 @@
+# Media Context - Images, videos, audio
+# Contexte pour fichiers média uniquement
+
+CONTEXT_NAME="media"
+CONTEXT_DESC="Media files - images, videos, audio"
+
+# Types média
+INCLUDE_TYPES="image"
+
+# Extensions média étendues
+INCLUDE_EXTS=".jpg .jpeg .png .gif .bmp .svg .ico .webp .tiff .mp4 .avi .mov .mkv .mp3 .wav .flac .ogg"
+
+# Exclure tout le reste
+EXCLUDE_TYPES="code config binary archive doc"
+
+# Options
+INCLUDE_HIDDEN=0
+MAX_FILE_SIZE_MB=0  # Les médias peuvent être gros
+
+# Commentaire
+# Backup des assets média uniquement
+# Images, vidéos, audio

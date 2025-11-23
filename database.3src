@@ -1,0 +1,23 @@
+# Database Context - DB schemas and migrations
+# Contexte pour fichiers de base de données
+
+CONTEXT_NAME="database"
+CONTEXT_DESC="Database schemas, migrations and SQL files"
+
+# Extensions DB
+INCLUDE_EXTS=".sql .sqlite .db .mdf .frm .ibd"
+
+# Configs de DB
+INCLUDE_TYPES="config"
+INCLUDE_EXTS=".sql .sqlite .db .mdf .frm .ibd .migration .schema"
+
+# Exclure tout le reste
+EXCLUDE_TYPES="code image archive binary doc"
+
+# Options
+INCLUDE_HIDDEN=0
+MAX_FILE_SIZE_MB=100
+
+# Commentaire
+# Backup des schémas et migrations de DB
+# Pas les données, juste la structure

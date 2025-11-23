@@ -1,0 +1,21 @@
+# Minimal Context - Ultra minimal backup
+# Contexte pour backup ultra minimal
+
+CONTEXT_NAME="minimal"
+CONTEXT_DESC="Ultra minimal - Critical files only"
+
+# Uniquement les configs critiques
+INCLUDE_EXTS=".json .yaml .yml .ini .conf .env"
+
+# Exclure absolument tout le reste
+EXCLUDE_TYPES="code binary archive image doc text"
+EXCLUDE_EXTS=".php .js .py .sh .exe .bin .zip .tar .gz .jpg .png .md .txt"
+
+# Options
+INCLUDE_HIDDEN=1
+MAX_FILE_SIZE_MB=1
+
+# Commentaire
+# Backup ULTRA minimal
+# Uniquement les fichiers de config critiques
+# Pour migration rapide des paramètres

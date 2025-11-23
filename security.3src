@@ -1,0 +1,23 @@
+# Security Context - Security-sensitive files
+# Contexte pour fichiers sensibles (pour audit)
+
+CONTEXT_NAME="security"
+CONTEXT_DESC="Security-sensitive configuration files"
+
+# Configs de sécurité
+INCLUDE_EXTS=".htaccess .htpasswd .key .pem .crt .csr .p12 .pfx .env .secret"
+
+# Types config
+INCLUDE_TYPES="config"
+
+# Exclure code et binaires
+EXCLUDE_TYPES="code binary archive image doc"
+
+# Options
+INCLUDE_HIDDEN=1  # Souvent les .env sont cachés
+MAX_FILE_SIZE_MB=1
+
+# Commentaire
+# ATTENTION: Fichiers sensibles!
+# Pour audit de sécurité uniquement
+# Ne pas partager ces archives
