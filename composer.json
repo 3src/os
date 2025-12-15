@@ -4,8 +4,13 @@
     "type": "project",
     "license": "AGPL-3.0-or-later",
     "require": {
-        "php": ">=7.4",
-        "phpmailer/phpmailer": "^6.9"
+        "php": ">=8.0",
+        "phpmailer/phpmailer": "^6.9",
+        "guzzlehttp/guzzle": "^7.8",
+        "league/flysystem": "^3.0",
+        "league/flysystem-ziparchive": "^3.0",
+        "sabre/vobject": "^4.5",
+        "phpseclib/phpseclib": "^3.0"
     },
     "autoload": {
         "psr-4": {
@@ -15,5 +20,14 @@
     "config": {
         "vendor-dir": "system/vendor",
         "optimize-autoloader": true
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php -r \"echo '\\n=== 3src OS Dependencies Installed ===\\n';\"",
+            "@php -r \"echo 'eyePear library replacement complete.\\n';\""
+        ],
+        "post-update-cmd": [
+            "@php -r \"echo '\\n=== 3src OS Dependencies Updated ===\\n';\""
+        ]
     }
 }

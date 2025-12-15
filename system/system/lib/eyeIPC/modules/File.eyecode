@@ -52,7 +52,7 @@ class System_SharedMemory_File extends System_SharedMemory_Common
     *
     * @access private
     */
-    var $_options;
+    private $_options;
 
     /**
     * true if plugin was connected to backend
@@ -61,7 +61,7 @@ class System_SharedMemory_File extends System_SharedMemory_Common
     *
     * @access private
     */
-    var $_connected;
+    private $_connected;
     // }}}
     // {{{ constructor
 
@@ -72,7 +72,7 @@ class System_SharedMemory_File extends System_SharedMemory_Common
      *
      * @access public
      */
-    function System_SharedMemory_File($options)
+    function __construct($options = array())
     {
         $this->_options = $this->_default($options, array
         (

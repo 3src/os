@@ -14,7 +14,21 @@ Copyright © 2005 - 2010 eyeos Team (team@eyeos.org)
              since 2010 Lars Knickrehm (mail@lars-sh.de)
 */
 
-eyePear('Load', array('System_SharedMemory'));
+// Load custom File-based SharedMemory implementation (no PEAR dependency)
+require_once EYE_ROOT . '/' . SYSTEM_DIR . '/' . LIB_DIR . '/eyeIPC/modules/File' . EYE_CODE_EXTENSION;
+
+/**
+ * Factory function to create SharedMemory driver instances
+ * Replaces System_SharedMemory::factory() from PEAR
+ *
+ * @param string $type Driver type (currently only 'File' supported)
+ * @param array $options Configuration options
+ * @return System_SharedMemory_File Driver instance
+ */
+function eyeIPC_factory($type = 'File', $options = array()) {
+	// 3src OS only uses File driver for session storage
+	return new System_SharedMemory_File($options);
+}
 
 function lib_eyeIPC_setVar($params){
 	if($params == null || count($params) < 2){
@@ -25,9 +39,9 @@ function lib_eyeIPC_setVar($params){
 	$name = $params[0];
 	$content = $params[1];
 	if(isset($params[2])){
-		$myClass =& System_SharedMemory::factory($params[2]);
+		$myClass = eyeIPC_factory($params[2]);
 	}else{
-		$myClass =& System_SharedMemory::factory();
+		$myClass = eyeIPC_factory();
 	}
 	$myClass->set($name,$content);
 	return true;
@@ -40,9 +54,9 @@ function lib_eyeIPC_getVar($params){
 	}
 	$name = $params[0];
 	if(isset($params[1])){
-		$myClass =& System_SharedMemory::factory($params[1]);
+		$myClass = eyeIPC_factory($params[1]);
 	}else{
-		$myClass =& System_SharedMemory::factory();
+		$myClass = eyeIPC_factory();
 	}
 	return $myClass->get($name);
 }
@@ -54,9 +68,9 @@ function lib_eyeIPC_rmVar($params){
 	}
 	$name = $params[0];
 	if(isset($params[1])){
-		$myClass =& System_SharedMemory::factory($params[1]);
+		$myClass = eyeIPC_factory($params[1]);
 	}else{
-		$myClass =& System_SharedMemory::factory();
+		$myClass = eyeIPC_factory();
 	}
 	$myClass->rm($name);
 	return true;
@@ -69,9 +83,9 @@ function lib_eyeIPC_isSet($params){
 	}
 	$name = $params[0];
 	if(isset($params[1])){
-		$myClass =& System_SharedMemory::factory($params[1]);
+		$myClass = eyeIPC_factory($params[1]);
 	}else{
-		$myClass =& System_SharedMemory::factory();
+		$myClass = eyeIPC_factory();
 	}
 	return $myClass->isVar($name);
 }
