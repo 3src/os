@@ -3,7 +3,7 @@
 **Complete documentation for 3src OS (oneye/eyeOS remanufacture)**
 
 **Maintained by**: 3src (Camille Roy) <robot@pastamp.com>
-**Last Updated**: 2025-11-08
+**Last Updated**: 2025-12-15
 
 ---
 
@@ -30,7 +30,9 @@
 
 | Document | Description | Lines | Status |
 |----------|-------------|-------|--------|
-| [PHP8_OBSOLETE_CODE_DOCUMENTATION.md](../PHP8_OBSOLETE_CODE_DOCUMENTATION.md) | Complete catalog of obsolete code patterns | 485 | ✅ Complete |
+| [PHP8_OBSOLETE_CODE_DOCUMENTATION.md](../PHP8_OBSOLETE_CODE_DOCUMENTATION.md) | Complete catalog of obsolete code patterns in custom code | 485 | ✅ Complete |
+| [PHP8_EYEPEAR_OBSOLETE_CODE.md](../PHP8_EYEPEAR_OBSOLETE_CODE.md) | Complete catalog of 112+ PHP 8 issues in eyePear library | 1,200+ | ✅ Complete |
+| [PHASE3_EYEPEAR_REPLACEMENT_STRATEGY.md](../PHASE3_EYEPEAR_REPLACEMENT_STRATEGY.md) | eyePear library replacement strategy & implementation plan | 800+ | ✅ Complete |
 | [PHP8_UPGRADE_FEASIBILITY_ANALYSIS.md](../PHP8_UPGRADE_FEASIBILITY_ANALYSIS.md) | Detailed migration strategy and cost-benefit | 504 | ✅ Complete |
 | [PHPMAILER_MIGRATION.md](../PHPMAILER_MIGRATION.md) | PHPMailer 5.1 → 6.12.0 migration guide | 376 | ✅ Complete |
 | [VAR_KEYWORD_MIGRATION.md](../VAR_KEYWORD_MIGRATION.md) | var keyword replacement guide | 900+ | ✅ Complete |
@@ -86,17 +88,25 @@
 
 ## 📊 Documentation Statistics
 
-**Total Documents**: 31
-- ✅ **Complete**: 5 (16%)
+**Total Documents**: 33
+- ✅ **Complete**: 13 (39%)
 - 🔄 **In Progress**: 1 (3%)
-- ⏳ **Planned**: 25 (81%)
+- ⏳ **Planned**: 19 (58%)
 
-**Total Lines Written**: 1,788 lines
+**Total Lines Written**: 9,000+ lines
 - README.md: ~400 lines
 - PHP8_OBSOLETE_CODE_DOCUMENTATION.md: 485 lines
+- PHP8_EYEPEAR_OBSOLETE_CODE.md: 1,200+ lines
+- PHASE3_EYEPEAR_REPLACEMENT_STRATEGY.md: 800+ lines
 - PHP8_UPGRADE_FEASIBILITY_ANALYSIS.md: 504 lines
 - PHPMAILER_MIGRATION.md: 376 lines
-- TESTING_JOURNAL.md: 423 lines
+- VAR_KEYWORD_MIGRATION.md: 900+ lines
+- XMLRPC_MIGRATION.md: 900+ lines
+- CHROMIUM_COOKIE_FIX.md: 650+ lines
+- INSTALLATION_AND_ARCHITECTURE.md: 1,100+ lines
+- TESTING_JOURNAL.md: 650+ lines
+- TEST_PLAN.md: 800+ lines
+- RISK_ASSESSMENT.md: 900+ lines
 
 ---
 
@@ -404,6 +414,6 @@ When creating new documentation:
 
 ---
 
-**Last Updated**: 2025-11-08
+**Last Updated**: 2025-12-15
 **Maintained by**: 3src (Camille Roy) <robot@pastamp.com>
 **Status**: Living document - updated regularly
